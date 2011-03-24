@@ -1,0 +1,530 @@
+/*
+* При работе со стилями, придерживаемся следующих правил:
+* 1. Сначала идут упоманиная об отступах и границах
+* 2. После, идут упоминания о позиционировании
+* 3. Размеры объекта
+* 4. Всё остальное  
+*/
+
+/* Базовые элементы */
+html, body, div, span, 
+h1, h2, h3, h4, h5, h6, p, 
+a, address, big, 
+em, img, q, s, samp,
+small, strong, tt, var,
+b, u, i,
+dl, dt, dd, 
+form, label, div, tr, td, table {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #f7f7f7;
+    display: none;
+    font-family: 'Courier New', Courier, monospace;
+    padding-bottom: 25px;
+    font-size: 16px;
+}
+
+table,div {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: 100%;
+    overflow: hidden;    
+}
+
+a{
+	color:#000;
+	text-decoration:underline;
+    outline-style:none !important;
+}
+a:hover{
+	text-decoration:none;
+}
+a.inv{
+	text-decoration:none;
+}
+a.inv:hover{
+	text-decoration:underline;
+}
+a.nd{
+	text-decoration:none;
+}
+a.nb:hover{
+	color: black;
+}
+p{
+    margin: 7px 0;
+}
+.ufont{
+    font-size: 18px;
+}
+h1{
+    font-size: 24px;
+}
+/* div */
+div#container{
+    width: 1000px;
+    margin: auto;
+    border-left: dashed 1px gray;
+    border-right: dashed 1px gray;
+    border-bottom: dashed 1px gray;
+    background-color: white;
+    background-image: url(/images/bg.gif);
+}
+div#r_div{
+    border-left: solid 1px #b7704c;
+    float: right;
+    width: 220px;
+    padding-bottom:32900px; 
+    margin-bottom:-32767px;
+    padding-top: 150px;
+    padding-left: 10px;
+    font-size: 21px;
+}
+div#r_div a{
+    text-decoration: none;
+    color: gray;
+}
+
+div#r_div a.sel{
+    color: black;
+}
+
+div#l_div{
+    float: left;
+    width: 768px;
+    padding-bottom:32767px; 
+    margin-bottom:-32767px;
+}
+div#footer_div{
+    width: 768px;
+    height: 14px;
+    border-top: dashed 1px #B4B4B4;
+    text-align: center;
+    font-size: 14px; 
+    clear:both;
+    padding: 5px 0; 
+}
+
+div#site_pre_title{
+    height:19px;
+    padding-top: 7px;    
+}
+div#site_pre_title #set_lang{
+    position: relative;
+    float: right;
+    width: 50px;
+    margin-right: 7px;
+    height: 0;
+    overflow: visible;    
+    font-size: 16px;   
+    
+}
+div#site_pre_title #set_lang a{
+    text-decoration: none;
+    color: #777;
+}
+div#site_pre_title #set_lang a.curr_lang{
+    color: black;
+    cursor: default;
+}
+div#site_title{
+    text-align: center;
+    font-size: 58px;  
+}
+div#site_under_title{
+    font-size: 30px;
+    text-align: center;
+}
+div#main_container{
+    width: 729px;
+    font-size: 16px;
+    margin: 70px 20px;
+}
+ul.menu{
+    list-style: none;
+    padding-top: 10px;
+    padding-left: 10px;
+
+    
+}
+ul.menu li{
+    padding-top: 7px;
+}
+span#contents{
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-bottom: 20px;
+}
+input{
+    border: solid 1px gray;
+    margin: 1px;
+    font-size: 14px;
+    padding: 3px;
+    font-family:'Courier New',Courier,monospace;   
+}
+input.cool{
+    border: solid 1px gray;
+    margin: 1px;
+    font-size: 14px;
+    padding: 3px;
+    font-family:'Courier New',Courier,monospace;
+}
+input.cool_focus{
+    margin: 0;
+    border: solid 2px #000;
+}
+input.wi{
+    width: 97%;
+}
+img.prj{
+    border-left: solid 1px gray ;
+    border-right: solid 1px gray ;
+    margin: 10px 0;
+}
+p.proj_name{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+table.prj tr{
+    opacity:0.8;
+}
+table.prj tr:hover{
+    opacity:1;
+}
+div.info_content{
+  height: 400px;
+}
+div.info_content h3{
+  margin: 10px;
+  border-bottom: dashed 1px #555;
+  cursor: pointer;  
+}
+div.info_content .cont_item p{
+  text-indent: 25px;
+}
+div.paginator {
+padding-bottom:5px;
+padding-right:10px;
+text-align:center;
+}
+
+div.paginator a {
+color:#0069af;
+font-size:14px;
+height:14px;
+padding:3px;
+text-decoration:underline;
+width:12px;
+}
+
+div.paginator a:hover {
+color:#bf1e0a;
+text-decoration:none;
+}
+
+div.paginator a.curr_page {
+background:#e5e5e5;
+color:#000;
+cursor:default;
+text-decoration:none;
+}
+
+div.paginator a.curr_page:hover {
+color:#000;
+}
+div.forma{
+        border: solid 1px #f36f21;
+        padding: 15px;
+        background-color: #fff6f0;
+        width: 696px;
+  }
+  div.forma p.note{
+        font-style: italic;
+        color: gray;
+    }
+    div.forma div.errorSummary{
+        width: 95%;
+        border: 2px solid #A90A12;
+        background: #FEEDEE;
+        padding: 7px;
+        
+        font-weight: bold;
+        margin: 7px 0;
+        
+    }
+    div.forma div.errorSummary ul{
+        list-style: square;
+    }
+   
+    div.forma div.row{
+        width: 95%;
+        margin: 9px 0;
+    }
+    div.forma label{
+        display: block;
+        font-size: 11px;
+    }
+    div.forma label.required{
+        font-weight: bold;
+    } 
+    div.forma label.error{
+        color: #A90A12;
+    }
+    
+    div.forma input,div.forma textarea,div.forma select{
+        width: 98%;
+        border: solid 1px #997662;
+        margin: 1px;
+    }
+    div.forma input:focus,div.forma textarea:focus,div.forma select:focus{
+        border:2px solid #066698;
+        margin: 0;
+    }
+    
+    
+    div.forma div.row.error label{
+        color: #A90A12;
+    }    
+    div.forma div.row.error input,div.forma div.row.error textarea,div.forma div.row.error select{
+        border-color: #A90A12;
+        margin: 0;
+    }
+    div.forma div.row.success label{
+        color: #13810a;
+    }
+     div.forma div.row.success input,div.forma div.row.success textarea,div.forma div.row.success select{
+        border-color:#13810a;
+    }
+    div.forma div.row.validating label{
+        color: silver;
+    }
+     div.forma div.row.validating input,div.forma div.row.validating textarea,div.forma div.row.validating select{
+        border-color: silver;
+    }
+       .hhh{
+        height: 0;
+        overflow: hidden;
+        display: none;
+    }
+table.list{
+    text-align: center;
+}
+table.list th{
+    font-weight: bold;
+    background-color: #018CF3;
+    color: white;
+    padding: 3px;
+}
+table.list tr{
+    background-color: #DDFFF4;
+}
+table.list tr:hover{
+    background-color: #FFF2DD;
+}
+table.list td{
+    padding: 5px;
+}
+
+.prev_blog_post{
+    padding: 15px 0;
+    
+}
+.prev_blog_post .prev_footer{
+    font-size: 12px;
+    color: #777;
+    font-weight: bold;
+    padding-top: 7px;
+}
+.prev_blog_post .prev_date{
+    display: block;
+    width: 200px;
+    float: left;
+}
+.prev_blog_post .prev_cc{
+    display: block;
+    width: 150px;
+    float: right;
+    
+}
+div.post-view{
+    margin: 20px 0;
+
+}
+.prev_blog_post h1{
+    font-size: 18px;
+    padding-bottom: 5px;
+    
+}
+.prev_blog_post a.post_link{
+    border-bottom: dashed 1px black ;
+    text-decoration: none;
+}
+.prev_blog_post a.post_link:hover{
+    border-bottom: solid 1px black ;
+}
+div.formu{
+        border: solid 1px #f36f21;
+        padding: 15px;
+         background-color: #FFF8F0;
+        width: 696px;
+        
+  }
+  div.formu p.note{
+        font-style: italic;
+        color: gray;
+    }
+    div.formu div.errorSummary{
+        width: 95%;
+        border: 2px solid #A90A12;
+        background: #FEEDEE;
+        padding: 7px;
+        
+        font-weight: bold;
+        margin: 7px 0;
+        
+    }
+    div.formu div.errorSummary ul{
+        list-style: square;
+    }
+   
+    div.formu div.row{
+        width: 98%;
+        margin: 9px 0;
+    }
+    div.formu label{
+        display: block;
+        font-size: 11px;
+    }
+    div.formu label.required{
+        font-weight: bold;
+    } 
+    div.formu label.error{
+        color: #A90A12;
+    }
+    
+    div.formu input,div.formu textarea,div.formu select{
+        width: 98%;
+        border: solid 1px #997662;
+        margin: 1px;
+    }
+    div.formu input:focus,div.formu textarea:focus,div.formu select:focus{
+        border:2px solid #066698;
+        margin: 0;
+    }
+    
+    
+    div.formu div.row.error label{
+        color: #A90A12;
+    }    
+    div.formu div.row.error input,div.formu div.row.error textarea,div.formu div.row.error select{
+        border-color: #A90A12;
+        margin: 0;
+    }
+    div.formu div.row.success label{
+        color: #13810a;
+    }
+     div.formu div.row.success input,div.formu div.row.success textarea,div.formu div.row.success select{
+        border-color:#13810a;
+    }
+    div.formu div.row.validating label{
+        color: silver;
+    }
+     div.formu div.row.validating input,div.formu div.row.validating textarea,div.formu div.row.validating select{
+        border-color: silver;
+    }
+       .hhh{
+        height: 0;
+        overflow: hidden;
+        display: none;
+    }
+    
+    a.form_holder{
+        display: block;
+        border: solid 1px #f36f21;
+        padding: 10px;
+        background-color: #FFF8F0;
+        width: 696px;     
+        font-weight: bold; 
+        color: #777;
+    }
+    div#sharepanel {
+        border: solid 1px #f36f21;
+        padding: 10px;
+        background-color: #FFF8F0;
+        width: 696px;
+        text-align: center;
+}
+div#sharepanel div.sharer{
+    width: 150px; 
+    overflow: hidden;
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+}
+.post_title{
+    border: solid 1px #f36f21;
+    padding: 10px;
+    background-color: #FFF8F0;
+    width: 696px;
+}
+.post_info{
+    font-size: 12px;
+    color: #777;
+    font-weight: bold;
+    padding-top: 3px;
+}
+.post_info .post_date{
+    display: block;
+    width: 200px;
+    float: left;
+}
+.post_info .post_cc{
+    display: block;
+    width: 150px;
+    float: right;
+    text-align: right;
+    padding-left: 10px;
+    
+}
+
+div#post_comments{
+    margin: 15px 0;
+}
+div#post_comments div.post_comment{
+    margin-top: 10px; 
+    border: 1px solid #bbe3f2;
+     border-left: 1px solid #4f94ad;
+     padding:5px 10px;
+     background: #F0FBFF;
+     width: 706px;
+     
+}
+
+div.post_comment div.comment_name{
+    font-weight: bold;
+    font-size: 18px;   
+    margin: 5px 0;
+    background: #E1F7FF;
+    width: 700px;
+    padding: 3px;
+    border: 1px solid #bbe3f2;
+    border-right: 1px solid #549cb6;
+}
+div.post_comment .comment_date{
+    font-size: 14px;
+    color: #777;
+}
+div.post_comment div.comment_text{
+   
+}
