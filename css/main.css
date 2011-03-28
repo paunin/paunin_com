@@ -41,24 +41,24 @@ table,div {
 }
 
 a{
-	color:#000;
-	text-decoration:underline;
+    color:#000;
+    text-decoration:underline;
     outline-style:none !important;
 }
 a:hover{
-	text-decoration:none;
+    text-decoration:none;
 }
 a.inv{
-	text-decoration:none;
+    text-decoration:none;
 }
 a.inv:hover{
-	text-decoration:underline;
+    text-decoration:underline;
 }
 a.nd{
-	text-decoration:none;
+    text-decoration:none;
 }
 a.nb:hover{
-	color: black;
+    color: black;
 }
 p{
     margin: 7px 0;
@@ -126,7 +126,7 @@ div#site_pre_title #set_lang{
     height: 0;
     overflow: visible;    
     font-size: 16px;   
-    
+
 }
 div#site_pre_title #set_lang a{
     text-decoration: none;
@@ -154,7 +154,7 @@ ul.menu{
     padding-top: 10px;
     padding-left: 10px;
 
-    
+
 }
 ul.menu li{
     padding-top: 7px;
@@ -165,25 +165,29 @@ span#contents{
     display: block;
     margin-bottom: 20px;
 }
-input{
+input[type=text],
+input[type=password]{
     border: solid 1px gray;
     margin: 1px;
     font-size: 14px;
     padding: 3px;
     font-family:'Courier New',Courier,monospace;   
 }
-input.cool{
+input[type=text].cool,
+input[type=password].cool{
     border: solid 1px gray;
     margin: 1px;
     font-size: 14px;
     padding: 3px;
     font-family:'Courier New',Courier,monospace;
 }
-input.cool_focus{
+input[type=text].cool_focus,
+input[type=password].cool_focus{
     margin: 0;
     border: solid 2px #000;
 }
-input.wi{
+input[type=text].wi,
+input[type=password].wi{
     width: 97%;
 }
 img.prj{
@@ -203,120 +207,121 @@ table.prj tr:hover{
     opacity:1;
 }
 div.info_content{
-  height: 400px;
+    height: 400px;
 }
 div.info_content h3{
-  margin: 10px;
-  border-bottom: dashed 1px #555;
-  cursor: pointer;  
+    margin: 10px;
+    border-bottom: dashed 1px #555;
+    cursor: pointer;  
 }
 div.info_content .cont_item p{
-  text-indent: 25px;
+    text-indent: 25px;
 }
 div.paginator {
-padding-bottom:5px;
-padding-right:10px;
-text-align:center;
+    padding-bottom:5px;
+    padding-right:10px;
+    text-align:center;
 }
 
 div.paginator a {
-color:#0069af;
-font-size:14px;
-height:14px;
-padding:3px;
-text-decoration:underline;
-width:12px;
+    color:#0069af;
+    font-size:14px;
+    height:14px;
+    padding:3px;
+    text-decoration:underline;
+    width:12px;
 }
 
 div.paginator a:hover {
-color:#bf1e0a;
-text-decoration:none;
+    color:#bf1e0a;
+    text-decoration:none;
 }
 
 div.paginator a.curr_page {
-background:#e5e5e5;
-color:#000;
-cursor:default;
-text-decoration:none;
+    background:#e5e5e5;
+    color:#000;
+    cursor:default;
+    text-decoration:none;
 }
 
 div.paginator a.curr_page:hover {
-color:#000;
+    color:#000;
 }
 div.forma{
-        border: solid 1px #f36f21;
-        padding: 15px;
-        background-color: #fff6f0;
-        width: 696px;
-  }
-  div.forma p.note{
-        font-style: italic;
-        color: gray;
-    }
-    div.forma div.errorSummary{
-        width: 95%;
-        border: 2px solid #A90A12;
-        background: #FEEDEE;
-        padding: 7px;
-        
-        font-weight: bold;
-        margin: 7px 0;
-        
-    }
-    div.forma div.errorSummary ul{
-        list-style: square;
-    }
-   
-    div.forma div.row{
-        width: 95%;
-        margin: 9px 0;
-    }
-    div.forma label{
-        display: block;
-        font-size: 11px;
-    }
-    div.forma label.required{
-        font-weight: bold;
-    } 
-    div.forma label.error{
-        color: #A90A12;
-    }
-    
-    div.forma input,div.forma textarea,div.forma select{
-        width: 98%;
-        border: solid 1px #997662;
-        margin: 1px;
-    }
-    div.forma input:focus,div.forma textarea:focus,div.forma select:focus{
-        border:2px solid #066698;
-        margin: 0;
-    }
-    
-    
-    div.forma div.row.error label{
-        color: #A90A12;
-    }    
-    div.forma div.row.error input,div.forma div.row.error textarea,div.forma div.row.error select{
-        border-color: #A90A12;
-        margin: 0;
-    }
-    div.forma div.row.success label{
-        color: #13810a;
-    }
-     div.forma div.row.success input,div.forma div.row.success textarea,div.forma div.row.success select{
-        border-color:#13810a;
-    }
-    div.forma div.row.validating label{
-        color: silver;
-    }
-     div.forma div.row.validating input,div.forma div.row.validating textarea,div.forma div.row.validating select{
-        border-color: silver;
-    }
-       .hhh{
-        height: 0;
-        overflow: hidden;
-        display: none;
-    }
+    border: solid 1px #f36f21;
+    padding: 15px;
+    background-color: #fff6f0;
+    width: 696px;
+}
+div.forma p.note{
+    font-style: italic;
+    color: gray;
+}
+div.forma div.errorSummary{
+    width: 95%;
+    border: 2px solid #A90A12;
+    background: #FEEDEE;
+    padding: 7px;
+
+    font-weight: bold;
+    margin: 7px 0;
+
+}
+div.forma div.errorSummary ul{
+    list-style: square;
+}
+
+div.forma div.row{
+    width: 95%;
+    margin: 9px 0;
+}
+div.forma label{
+    display: block;
+    font-size: 11px;
+}
+div.forma label.required{
+    font-weight: bold;
+} 
+div.forma label.error{
+    color: #A90A12;
+}
+
+div.forma input,div.forma textarea,div.forma select{
+    width: 98%;
+    border: solid 1px #997662;
+    margin: 1px;
+}
+div.forma input:focus,div.forma textarea:focus,div.forma select:focus{
+    border:2px solid #066698;
+    margin: 0;
+}
+
+
+
+div.forma div.row.error label{
+    color: #A90A12;
+}    
+div.forma div.row.error input,div.forma div.row.error textarea,div.forma div.row.error select{
+    border-color: #A90A12;
+    margin: 0;
+}
+div.forma div.row.success label{
+    color: #13810a;
+}
+div.forma div.row.success input,div.forma div.row.success textarea,div.forma div.row.success select{
+    border-color:#13810a;
+}
+div.forma div.row.validating label{
+    color: silver;
+}
+div.forma div.row.validating input,div.forma div.row.validating textarea,div.forma div.row.validating select{
+    border-color: silver;
+}
+.hhh{
+    height: 0;
+    overflow: hidden;
+    display: none;
+}
 table.list{
     text-align: center;
 }
@@ -338,7 +343,7 @@ table.list td{
 
 .prev_blog_post{
     padding: 15px 0;
-    
+
 }
 .prev_blog_post .prev_footer{
     font-size: 12px;
@@ -355,7 +360,7 @@ table.list td{
     display: block;
     width: 150px;
     float: right;
-    
+
 }
 div.post-view{
     margin: 20px 0;
@@ -364,7 +369,7 @@ div.post-view{
 .prev_blog_post h1{
     font-size: 18px;
     padding-bottom: 5px;
-    
+
 }
 .prev_blog_post a.post_link{
     border-bottom: dashed 1px black ;
@@ -374,96 +379,148 @@ div.post-view{
     border-bottom: solid 1px black ;
 }
 div.formu{
-        border: solid 1px #f36f21;
-        padding: 15px;
-         background-color: #FFF8F0;
-        width: 696px;
-        
-  }
-  div.formu p.note{
-        font-style: italic;
-        color: gray;
-    }
-    div.formu div.errorSummary{
-        width: 95%;
-        border: 2px solid #A90A12;
-        background: #FEEDEE;
-        padding: 7px;
-        
-        font-weight: bold;
-        margin: 7px 0;
-        
-    }
-    div.formu div.errorSummary ul{
-        list-style: square;
-    }
-   
-    div.formu div.row{
-        width: 98%;
-        margin: 9px 0;
-    }
-    div.formu label{
-        display: block;
-        font-size: 11px;
-    }
-    div.formu label.required{
-        font-weight: bold;
-    } 
-    div.formu label.error{
-        color: #A90A12;
-    }
-    
-    div.formu input,div.formu textarea,div.formu select{
-        width: 98%;
-        border: solid 1px #997662;
-        margin: 1px;
-    }
-    div.formu input:focus,div.formu textarea:focus,div.formu select:focus{
-        border:2px solid #066698;
-        margin: 0;
-    }
-    
-    
-    div.formu div.row.error label{
-        color: #A90A12;
-    }    
-    div.formu div.row.error input,div.formu div.row.error textarea,div.formu div.row.error select{
-        border-color: #A90A12;
-        margin: 0;
-    }
-    div.formu div.row.success label{
-        color: #13810a;
-    }
-     div.formu div.row.success input,div.formu div.row.success textarea,div.formu div.row.success select{
-        border-color:#13810a;
-    }
-    div.formu div.row.validating label{
-        color: silver;
-    }
-     div.formu div.row.validating input,div.formu div.row.validating textarea,div.formu div.row.validating select{
-        border-color: silver;
-    }
-       .hhh{
-        height: 0;
-        overflow: hidden;
-        display: none;
-    }
-    
-    a.form_holder{
-        display: block;
-        border: solid 1px #f36f21;
-        padding: 10px;
-        background-color: #FFF8F0;
-        width: 696px;     
-        font-weight: bold; 
-        color: #777;
-    }
-    div#sharepanel {
-        border: solid 1px #f36f21;
-        padding: 10px;
-        background-color: #FFF8F0;
-        width: 696px;
-        text-align: center;
+    border: solid 1px #f36f21;
+    padding: 15px;
+    background-color: #FFF8F0;
+    width: 687px;
+
+}
+
+div.formu div.errorMessage{
+    font-size: 13px;
+    font-weight: bold;
+
+    color: 	#A90A12;
+}
+div.formu p.note{
+    font-style: italic;
+    color: gray;
+}
+div.formu div.errorSummary{
+    width: 95%;
+    border: 2px solid #A90A12;
+    background: #FEEDEE;
+    padding: 7px;
+
+    font-weight: bold;
+    margin: 7px 0;
+
+}
+div.formu div.errorSummary ul{
+    list-style: square;
+}
+
+div.formu div.row{
+    width: 98%;
+    margin: 9px 0;
+}
+div.formu div.row.buttons{
+    text-align: center;
+}
+
+div.formu .row.buttons input, 
+div.formu .row.submit input,
+div.formu input[type=button],
+div.formu input[type=submit]
+{
+    height: 37px;
+    background: url(/images/btn_full.gif);
+    background-position: bottom;
+    background-repeat: repeat-x;
+    border: solid 1px #aaa;
+    cursor: pointer;
+    vertical-align: middle;
+    font-size: 13px;
+    width: 98%;
+
+
+}
+div.formu .row.buttons input:hover,
+div.formu .row.submit input:hover,
+div.formu input[type=button]:hover,
+div.formu input[type=submit]:hover{
+    background-position: center;
+}
+div.formu .row.buttons input:focus,
+div.formu .row.submit input:focus,
+div.formu input[type=button]:focus,
+div.formu input[type=submit]:focus{
+    background-position: top;
+}
+div.formu label{
+    display: block;
+    font-size: 11px;
+}
+div.formu label.required{
+    font-weight: bold;
+} 
+div.formu label.error{
+    color: #A90A12;
+}
+
+div.formu input[type=text],
+div.formu input[type=password],
+
+div.formu textarea,
+div.formu select{
+    width: 98%;
+    border: solid 1px #997662;
+    margin: 1px;
+}
+
+div.formu input[type=text]:focus,
+div.formu input[type=password]:focus,
+div.formu textarea:focus,
+div.formu select:focus{
+    border:2px solid #066698;
+    margin: 0;
+}
+
+
+
+div.formu div.row.error label{
+    color: #A90A12;
+}    
+div.formu div.row.error input,div.formu div.row.error textarea,div.formu div.row.error select{
+    border-color: #A90A12;
+    margin: 0;
+}
+div.formu div.row.success label{
+    color: #13810a;
+}
+div.formu div.row.success input,div.formu div.row.success textarea,div.formu div.row.success select{
+    border-color:#13810a;
+}
+div.formu div.row.validating label{
+    color: silver;
+}
+div.formu div.row.validating input,div.formu div.row.validating textarea,div.formu div.row.validating select{
+    border-color: silver;
+}
+.hhh{
+    height: 0;
+    overflow: hidden;
+    display: none;
+}
+.captcha img{
+    border: solid 1px #feead3;
+}
+
+a.form_holder{
+    display: block;
+    border: solid 1px #ffb78c;
+    padding: 10px;
+    background-color: #FFF8F0;
+    width: 696px;     
+    font-weight: bold; 
+    color: #777;
+}
+div#sharepanel {
+    border: solid 1px #ffb78c;
+    padding: 10px;
+    background-color: #FFF8F0;
+    width: 696px;
+    text-align: center;
 }
 div#sharepanel div.sharer{
     width: 150px; 
@@ -473,7 +530,7 @@ div#sharepanel div.sharer{
     margin-right: 10px;
 }
 .post_title{
-    border: solid 1px #f36f21;
+    border: solid 1px #ffb78c;
     padding: 10px;
     background-color: #FFF8F0;
     width: 696px;
@@ -495,7 +552,7 @@ div#sharepanel div.sharer{
     float: right;
     text-align: right;
     padding-left: 10px;
-    
+
 }
 
 div#post_comments{
@@ -504,11 +561,11 @@ div#post_comments{
 div#post_comments div.post_comment{
     margin-top: 10px; 
     border: 1px solid #bbe3f2;
-     border-left: 1px solid #4f94ad;
-     padding:5px 10px;
-     background: #F0FBFF;
-     width: 706px;
-     
+    border-left: 1px solid #4f94ad;
+    padding:5px 10px;
+    background: #F0FBFF;
+    width: 706px;
+
 }
 
 div.post_comment div.comment_name{
@@ -526,5 +583,5 @@ div.post_comment .comment_date{
     color: #777;
 }
 div.post_comment div.comment_text{
-   
+
 }

@@ -29,11 +29,9 @@ $form=$this->beginWidget('CActiveForm', array(
 
 )); ?>
 
-	<p class="note"><?=Yii::t('main','Fields with * are required.')?></p>
+	<!--p class="note"><?=Yii::t('main','Fields with * are required.')?></p-->
 
-	<?php echo $form->errorSummary($model); ?>
-
-
+	<?php  //echo $form->errorSummary($model); ?>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'name'); ?>
