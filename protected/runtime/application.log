@@ -8441,3 +8441,214 @@ in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php
 2011/03/28 16:52:47 [trace] [system.CModule] Loading "assetManager" application component
 in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (22)
 in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:13:51 [trace] [system.CModule] Loading "log" application component
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:13:51 [trace] [system.CModule] Loading "request" application component
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:13:51 [trace] [system.CModule] Loading "urlManager" application component
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:13:51 [trace] [system.CModule] Loading "clientScript" application component
+in /home/paunin/data/www/paunin.com/protected/components/Action.php (18)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:13:52 [trace] [system.web.filters.CFilterChain] Running filter Main.filter()
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:13:52 [trace] [system.CModule] Loading "db" application component
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (23)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:13:52 [trace] [system.db.CDbConnection] Opening DB connection
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (23)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `blog_post`
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (23)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `blog_post`
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (23)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:13:52 [trace] [system.db.ar.CActiveRecord] BlogPost.count()
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (24)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `blog_post` `t`
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (24)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:13:52 [trace] [system.db.ar.CActiveRecord] BlogPost.findAll()
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (30)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `blog_comment`
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (30)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `blog_comment`
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (30)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`abbr` AS `t0_c2`, `t`.`preview` AS `t0_c3`, `t`.`title` AS `t0_c1`, `t`.`created_at` AS `t0_c7`, `t`.`id` AS `t0_c0` FROM `blog_post` `t`  ORDER BY created_at DESC LIMIT 30
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (30)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `blogComments`.`id` AS `t1_c0`, `blogComments`.`post_id` AS `t1_c1`, `blogComments`.`mail` AS `t1_c2`, `blogComments`.`name` AS `t1_c3`, `blogComments`.`text` AS `t1_c4`, `blogComments`.`created_at` AS `t1_c5` FROM `blog_post` `t` LEFT OUTER JOIN `blog_comment` `blogComments` ON (`blogComments`.`post_id`=`t`.`id`)  WHERE (`t`.`id` IN (5, 4, 3, 2))
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (30)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:13:52 [trace] [system.CModule] Loading "widgetFactory" application component
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `blog_tag`
+in /home/paunin/data/www/paunin.com/protected/models/BlogTag.php (21)
+in /home/paunin/data/www/paunin.com/protected/widgets/tagsCloudWidget.php (14)
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `blog_tag`
+in /home/paunin/data/www/paunin.com/protected/models/BlogTag.php (21)
+in /home/paunin/data/www/paunin.com/protected/widgets/tagsCloudWidget.php (14)
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+2011/03/28 17:13:52 [trace] [system.db.ar.CActiveRecord] BlogTag.findAll()
+in /home/paunin/data/www/paunin.com/protected/widgets/tagsCloudWidget.php (14)
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `blog_tag` `t`
+in /home/paunin/data/www/paunin.com/protected/widgets/tagsCloudWidget.php (14)
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+2011/03/28 17:13:52 [trace] [system.db.ar.CActiveRecord] lazy loading BlogTag.blogPosts
+in /home/paunin/data/www/paunin.com/protected/widgets/tagsCloudWidget.php (16)
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `blog_post_tag`
+in /home/paunin/data/www/paunin.com/protected/widgets/tagsCloudWidget.php (16)
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `blog_post_tag`
+in /home/paunin/data/www/paunin.com/protected/widgets/tagsCloudWidget.php (16)
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SELECT `blogPosts`.`id` AS `t1_c0`, `blogPosts`.`title` AS `t1_c1`, `blogPosts`.`abbr` AS `t1_c2`, `blogPosts`.`preview` AS `t1_c3`, `blogPosts`.`text` AS `t1_c4`, `blogPosts`.`tags` AS `t1_c5`, `blogPosts`.`rubrics` AS `t1_c6`, `blogPosts`.`created_at` AS `t1_c7` FROM `blog_post` `blogPosts`  INNER JOIN `blog_post_tag` `blogPosts_blogPosts` ON (`blogPosts_blogPosts`.`tag_id`=:ypl0) AND (`blogPosts`.`id`=`blogPosts_blogPosts`.`post_id`)
+in /home/paunin/data/www/paunin.com/protected/widgets/tagsCloudWidget.php (16)
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+2011/03/28 17:13:52 [trace] [system.db.ar.CActiveRecord] lazy loading BlogTag.blogPosts
+in /home/paunin/data/www/paunin.com/protected/widgets/tagsCloudWidget.php (16)
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SELECT `blogPosts`.`id` AS `t1_c0`, `blogPosts`.`title` AS `t1_c1`, `blogPosts`.`abbr` AS `t1_c2`, `blogPosts`.`preview` AS `t1_c3`, `blogPosts`.`text` AS `t1_c4`, `blogPosts`.`tags` AS `t1_c5`, `blogPosts`.`rubrics` AS `t1_c6`, `blogPosts`.`created_at` AS `t1_c7` FROM `blog_post` `blogPosts`  INNER JOIN `blog_post_tag` `blogPosts_blogPosts` ON (`blogPosts_blogPosts`.`tag_id`=:ypl0) AND (`blogPosts`.`id`=`blogPosts_blogPosts`.`post_id`)
+in /home/paunin/data/www/paunin.com/protected/widgets/tagsCloudWidget.php (16)
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+2011/03/28 17:13:52 [trace] [system.db.ar.CActiveRecord] lazy loading BlogTag.blogPosts
+in /home/paunin/data/www/paunin.com/protected/widgets/tagsCloudWidget.php (16)
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SELECT `blogPosts`.`id` AS `t1_c0`, `blogPosts`.`title` AS `t1_c1`, `blogPosts`.`abbr` AS `t1_c2`, `blogPosts`.`preview` AS `t1_c3`, `blogPosts`.`text` AS `t1_c4`, `blogPosts`.`tags` AS `t1_c5`, `blogPosts`.`rubrics` AS `t1_c6`, `blogPosts`.`created_at` AS `t1_c7` FROM `blog_post` `blogPosts`  INNER JOIN `blog_post_tag` `blogPosts_blogPosts` ON (`blogPosts_blogPosts`.`tag_id`=:ypl0) AND (`blogPosts`.`id`=`blogPosts_blogPosts`.`post_id`)
+in /home/paunin/data/www/paunin.com/protected/widgets/tagsCloudWidget.php (16)
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+2011/03/28 17:13:52 [trace] [system.db.ar.CActiveRecord] lazy loading BlogTag.blogPosts
+in /home/paunin/data/www/paunin.com/protected/widgets/tagsCloudWidget.php (16)
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SELECT `blogPosts`.`id` AS `t1_c0`, `blogPosts`.`title` AS `t1_c1`, `blogPosts`.`abbr` AS `t1_c2`, `blogPosts`.`preview` AS `t1_c3`, `blogPosts`.`text` AS `t1_c4`, `blogPosts`.`tags` AS `t1_c5`, `blogPosts`.`rubrics` AS `t1_c6`, `blogPosts`.`created_at` AS `t1_c7` FROM `blog_post` `blogPosts`  INNER JOIN `blog_post_tag` `blogPosts_blogPosts` ON (`blogPosts_blogPosts`.`tag_id`=:ypl0) AND (`blogPosts`.`id`=`blogPosts_blogPosts`.`post_id`)
+in /home/paunin/data/www/paunin.com/protected/widgets/tagsCloudWidget.php (16)
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+2011/03/28 17:13:52 [trace] [system.db.ar.CActiveRecord] lazy loading BlogTag.blogPosts
+in /home/paunin/data/www/paunin.com/protected/widgets/tagsCloudWidget.php (16)
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SELECT `blogPosts`.`id` AS `t1_c0`, `blogPosts`.`title` AS `t1_c1`, `blogPosts`.`abbr` AS `t1_c2`, `blogPosts`.`preview` AS `t1_c3`, `blogPosts`.`text` AS `t1_c4`, `blogPosts`.`tags` AS `t1_c5`, `blogPosts`.`rubrics` AS `t1_c6`, `blogPosts`.`created_at` AS `t1_c7` FROM `blog_post` `blogPosts`  INNER JOIN `blog_post_tag` `blogPosts_blogPosts` ON (`blogPosts_blogPosts`.`tag_id`=:ypl0) AND (`blogPosts`.`id`=`blogPosts_blogPosts`.`post_id`)
+in /home/paunin/data/www/paunin.com/protected/widgets/tagsCloudWidget.php (16)
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+2011/03/28 17:13:52 [trace] [system.db.ar.CActiveRecord] lazy loading BlogTag.blogPosts
+in /home/paunin/data/www/paunin.com/protected/widgets/tagsCloudWidget.php (16)
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SELECT `blogPosts`.`id` AS `t1_c0`, `blogPosts`.`title` AS `t1_c1`, `blogPosts`.`abbr` AS `t1_c2`, `blogPosts`.`preview` AS `t1_c3`, `blogPosts`.`text` AS `t1_c4`, `blogPosts`.`tags` AS `t1_c5`, `blogPosts`.`rubrics` AS `t1_c6`, `blogPosts`.`created_at` AS `t1_c7` FROM `blog_post` `blogPosts`  INNER JOIN `blog_post_tag` `blogPosts_blogPosts` ON (`blogPosts_blogPosts`.`tag_id`=:ypl0) AND (`blogPosts`.`id`=`blogPosts_blogPosts`.`post_id`)
+in /home/paunin/data/www/paunin.com/protected/widgets/tagsCloudWidget.php (16)
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+2011/03/28 17:13:52 [trace] [system.db.ar.CActiveRecord] lazy loading BlogTag.blogPosts
+in /home/paunin/data/www/paunin.com/protected/widgets/tagsCloudWidget.php (16)
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SELECT `blogPosts`.`id` AS `t1_c0`, `blogPosts`.`title` AS `t1_c1`, `blogPosts`.`abbr` AS `t1_c2`, `blogPosts`.`preview` AS `t1_c3`, `blogPosts`.`text` AS `t1_c4`, `blogPosts`.`tags` AS `t1_c5`, `blogPosts`.`rubrics` AS `t1_c6`, `blogPosts`.`created_at` AS `t1_c7` FROM `blog_post` `blogPosts`  INNER JOIN `blog_post_tag` `blogPosts_blogPosts` ON (`blogPosts_blogPosts`.`tag_id`=:ypl0) AND (`blogPosts`.`id`=`blogPosts_blogPosts`.`post_id`)
+in /home/paunin/data/www/paunin.com/protected/widgets/tagsCloudWidget.php (16)
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+2011/03/28 17:13:52 [trace] [system.db.ar.CActiveRecord] lazy loading BlogTag.blogPosts
+in /home/paunin/data/www/paunin.com/protected/widgets/tagsCloudWidget.php (16)
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SELECT `blogPosts`.`id` AS `t1_c0`, `blogPosts`.`title` AS `t1_c1`, `blogPosts`.`abbr` AS `t1_c2`, `blogPosts`.`preview` AS `t1_c3`, `blogPosts`.`text` AS `t1_c4`, `blogPosts`.`tags` AS `t1_c5`, `blogPosts`.`rubrics` AS `t1_c6`, `blogPosts`.`created_at` AS `t1_c7` FROM `blog_post` `blogPosts`  INNER JOIN `blog_post_tag` `blogPosts_blogPosts` ON (`blogPosts_blogPosts`.`tag_id`=:ypl0) AND (`blogPosts`.`id`=`blogPosts_blogPosts`.`post_id`)
+in /home/paunin/data/www/paunin.com/protected/widgets/tagsCloudWidget.php (16)
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (2)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+2011/03/28 17:13:52 [trace] [system.CModule] Loading "messages" application component
+in /home/paunin/data/www/paunin.com/protected/views/site/BlogView.php (12)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `content`
+in /home/paunin/data/www/paunin.com/protected/models/Content.php (27)
+in /home/paunin/data/www/paunin.com/protected/widgets/rMenuWidget.php (19)
+in /home/paunin/data/www/paunin.com/protected/views/layouts/main.php (25)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `content`
+in /home/paunin/data/www/paunin.com/protected/models/Content.php (27)
+in /home/paunin/data/www/paunin.com/protected/widgets/rMenuWidget.php (19)
+in /home/paunin/data/www/paunin.com/protected/views/layouts/main.php (25)
+2011/03/28 17:13:52 [trace] [system.db.ar.CActiveRecord] Content.findAll()
+in /home/paunin/data/www/paunin.com/protected/widgets/rMenuWidget.php (19)
+in /home/paunin/data/www/paunin.com/protected/views/layouts/main.php (25)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+2011/03/28 17:13:52 [trace] [system.db.CDbCommand] Querying SQL: SELECT abr,ru_name AS name FROM `content` `t` WHERE active=:active ORDER BY prior
+in /home/paunin/data/www/paunin.com/protected/widgets/rMenuWidget.php (19)
+in /home/paunin/data/www/paunin.com/protected/views/layouts/main.php (25)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+2011/03/28 17:13:52 [trace] [system.CModule] Loading "assetManager" application component
+in /home/paunin/data/www/paunin.com/protected/controllers/site/BlogAction.php (32)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:15:01 [trace] [system.CModule] Loading "log" application component
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:15:01 [trace] [system.CModule] Loading "request" application component
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:15:01 [trace] [system.CModule] Loading "urlManager" application component
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:15:01 [trace] [system.CModule] Loading "clientScript" application component
+in /home/paunin/data/www/paunin.com/protected/components/Action.php (18)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:15:01 [trace] [system.web.filters.CFilterChain] Running filter Main.filter()
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:15:01 [trace] [system.CModule] Loading "db" application component
+in /home/paunin/data/www/paunin.com/protected/models/Content.php (27)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (19)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:15:01 [trace] [system.db.CDbConnection] Opening DB connection
+in /home/paunin/data/www/paunin.com/protected/models/Content.php (27)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (19)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:15:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `content`
+in /home/paunin/data/www/paunin.com/protected/models/Content.php (27)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (19)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:15:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `content`
+in /home/paunin/data/www/paunin.com/protected/models/Content.php (27)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (19)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:15:01 [trace] [system.db.ar.CActiveRecord] Content.find()
+in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (19)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:15:01 [trace] [system.db.CDbCommand] Querying SQL: SELECT abr,en_name AS name,en_text AS text FROM `content` `t` WHERE active=:active AND abr=:abr ORDER BY prior LIMIT 1
+in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (19)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:15:01 [trace] [system.CModule] Loading "messages" application component
+in /home/paunin/data/www/paunin.com/protected/views/layouts/main.php (9)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (22)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:15:01 [trace] [system.CModule] Loading "widgetFactory" application component
+in /home/paunin/data/www/paunin.com/protected/views/layouts/main.php (25)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (22)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:15:01 [trace] [system.db.ar.CActiveRecord] Content.findAll()
+in /home/paunin/data/www/paunin.com/protected/widgets/rMenuWidget.php (19)
+in /home/paunin/data/www/paunin.com/protected/views/layouts/main.php (25)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (22)
+2011/03/28 17:15:01 [trace] [system.db.CDbCommand] Querying SQL: SELECT abr,en_name AS name FROM `content` `t` WHERE active=:active ORDER BY prior
+in /home/paunin/data/www/paunin.com/protected/widgets/rMenuWidget.php (19)
+in /home/paunin/data/www/paunin.com/protected/views/layouts/main.php (25)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (22)
+2011/03/28 17:15:01 [trace] [system.CModule] Loading "assetManager" application component
+in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (22)
+in /home/paunin/data/www/paunin.com/index.php (14)
