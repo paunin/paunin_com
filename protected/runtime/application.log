@@ -8652,3 +8652,55 @@ in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php
 2011/03/28 17:15:01 [trace] [system.CModule] Loading "assetManager" application component
 in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (22)
 in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:16:49 [trace] [system.CModule] Loading "log" application component
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:16:49 [trace] [system.CModule] Loading "request" application component
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:16:49 [trace] [system.CModule] Loading "urlManager" application component
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:16:49 [trace] [system.CModule] Loading "clientScript" application component
+in /home/paunin/data/www/paunin.com/protected/components/Action.php (18)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:16:49 [trace] [system.web.filters.CFilterChain] Running filter Main.filter()
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:16:49 [trace] [system.CModule] Loading "db" application component
+in /home/paunin/data/www/paunin.com/protected/models/Content.php (27)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (19)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:16:49 [trace] [system.db.CDbConnection] Opening DB connection
+in /home/paunin/data/www/paunin.com/protected/models/Content.php (27)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (19)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:16:49 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `content`
+in /home/paunin/data/www/paunin.com/protected/models/Content.php (27)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (19)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:16:49 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `content`
+in /home/paunin/data/www/paunin.com/protected/models/Content.php (27)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (19)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:16:49 [trace] [system.db.ar.CActiveRecord] Content.find()
+in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (19)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:16:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT abr,en_name AS name,en_text AS text FROM `content` `t` WHERE active=:active AND abr=:abr ORDER BY prior LIMIT 1
+in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (19)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:16:49 [trace] [system.CModule] Loading "messages" application component
+in /home/paunin/data/www/paunin.com/protected/views/layouts/main.php (9)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (22)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:16:49 [trace] [system.CModule] Loading "widgetFactory" application component
+in /home/paunin/data/www/paunin.com/protected/views/layouts/main.php (25)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (22)
+in /home/paunin/data/www/paunin.com/index.php (14)
+2011/03/28 17:16:49 [trace] [system.db.ar.CActiveRecord] Content.findAll()
+in /home/paunin/data/www/paunin.com/protected/widgets/rMenuWidget.php (19)
+in /home/paunin/data/www/paunin.com/protected/views/layouts/main.php (25)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (22)
+2011/03/28 17:16:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT abr,en_name AS name FROM `content` `t` WHERE active=:active ORDER BY prior
+in /home/paunin/data/www/paunin.com/protected/widgets/rMenuWidget.php (19)
+in /home/paunin/data/www/paunin.com/protected/views/layouts/main.php (25)
+in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (22)
+2011/03/28 17:16:49 [trace] [system.CModule] Loading "assetManager" application component
+in /home/paunin/data/www/paunin.com/protected/controllers/site/ContentAction.php (22)
+in /home/paunin/data/www/paunin.com/index.php (14)
