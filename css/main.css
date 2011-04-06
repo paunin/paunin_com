@@ -479,7 +479,7 @@ div.formu select:focus{
 
 
 div.formu div.row.error label{
-    color: #A90A12;
+    
 }    
 div.formu div.row.error input,div.formu div.row.error textarea,div.formu div.row.error select{
     border-color: #A90A12;
