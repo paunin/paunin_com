@@ -12,8 +12,19 @@
 <div id="post_comments">
     <?php foreach($blogPost->blogComments as $comment):?>
     <div class="post_comment"> 
-        <div class="comment_name"><?=$comment->name?><span class="comment_date" >[<?=date('d/m/Y H:i:s',strtotime($comment->created_at))?>]</span></div>
+        <div class="comment_name">
+            <?=$comment->name?>
+            <span class="comment_date" >
+                [<?=date('d/m/Y H:i:s',strtotime($comment->created_at))?>]
+            </span>       
+        </div>
         <div class="comment_text"><?=$comment->text?>
+        <?php 
+            if(Yii::app()->user->checkAccess('admin')){
+        ?><br/><br/>[x]
+        <?php 
+        }
+        ?>
         </div>
     </div>
     <?php endforeach;?>

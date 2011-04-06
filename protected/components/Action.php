@@ -15,15 +15,6 @@ class Action extends CAction
     public function __construct($controller, $id)
      {
         parent::__construct($controller, $id);
-        $cs = Yii::app()->clientScript;
-        $cs->registerCoreScript('jquery');
-        $cs->registerScriptFile(Yii::app()->getRequest()->getBaseUrl(true).'/js/cufon/cufon-yui.js');
-        $cs->registerScriptFile(Yii::app()->getRequest()->getBaseUrl(true).'/js/cufon/b52.js');
-        $cs->registerScriptFile(Yii::app()->getRequest()->getBaseUrl(true).'/js/cufon/initb52.js');
-        $cs->registerScriptFile(Yii::app()->getRequest()->getBaseUrl(true).'/js/common.js');
-        $cs->registerCssFile(Yii::app()->getRequest()->getBaseUrl(true).'/css/main.css');
-        
-       
         $this->init();
      }  
      
