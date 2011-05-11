@@ -88,6 +88,7 @@ div#r_div{
     padding-top: 150px;
     padding-left: 10px;
     font-size: 21px;
+    margin-top: 0;
 }
 div#r_div a{
     text-decoration: none;
@@ -106,7 +107,7 @@ div#l_div{
 }
 div#footer_div{
     width: 768px;
-    height: 14px;
+    
     border-top: dashed 1px #B4B4B4;
     text-align: center;
     font-size: 14px; 
@@ -153,6 +154,7 @@ ul.menu{
     list-style: none;
     padding-top: 10px;
     padding-left: 10px;
+    margin: 0;
 
 
 }

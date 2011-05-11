@@ -1,2 +1,2 @@
 User-Agent: *
-Host: www.celler.ru
+Host: www.paunin.com

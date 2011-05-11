@@ -28,5 +28,7 @@ function scrollto(elemId){
 }
 // main ready
 $(document).ready(function(){
-		make_in();
+    $('body').show();
+    make_in();
+           
 });

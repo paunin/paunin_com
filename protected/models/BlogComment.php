@@ -39,6 +39,15 @@ class BlogComment extends CActiveRecord
 	 */
 	public function rules()
 	{
+	$purif=new CHtmlPurifier();
+       $purif->options=array(
+           'AutoFormat.Linkify'=>true,
+           'HTML.ForbiddenElements'=>array('b'),
+           'HTML.MaxImgLength'=>'800',
+           'CSS.MaxImgLength'=>'800',
+           'Filter.YouTube'=>true,
+		   //'HTML.Nofollow'=>true,
+       );
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
@@ -49,6 +58,7 @@ class BlogComment extends CActiveRecord
             array('captcha', 'captcha', 'captchaAction' => 'site/captcha'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
+			array('name, text','filter','filter'=>array($purif,'purify')),
 			array('id, post_id, mail, name, text, created_at', 'safe', 'on'=>'search'),
 		);
 	}
