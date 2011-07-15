@@ -1,2 +1,2 @@
 User-Agent: *
-Host: www.paunin.com
+Host:paunin.com
