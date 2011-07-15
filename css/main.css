@@ -518,9 +518,8 @@ a.form_holder{
     color: #777;
 }
 div#sharepanel {
-    border: solid 1px #ffb78c;
+    
     padding: 5px 5px 0;
-    background-color: #FFF8F0;
     width: 707px;
     text-align: center;
 }
