@@ -6,7 +6,7 @@
     </div>
 </div><div class="post-view">
 <?=$blogPost->text?></div>
-<?=$this->renderPartial('sharepanel')?>
+<?=$this->renderPartial('sharepanel',array('title'=>$blogPost->title))?>
 
 
 <div id="post_comments">
