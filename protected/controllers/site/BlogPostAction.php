@@ -21,6 +21,7 @@ class BlogPostAction extends Action
         $cs->registerScriptFile(Yii::app()->getRequest()->getBaseUrl(true).'/js/lib/tiny_mce/small_tiny_init.js');
         
         $model = new BlogComment;
+        $model->scenario = 'addcomment';
         if(isset($_POST['ajax']) && $_POST['ajax']==='blog-comment-BlogComment-form')
         {
             echo CActiveForm::validate($model);
@@ -31,11 +32,12 @@ class BlogPostAction extends Action
             $model->attributes=$_POST['BlogComment'];
             $model->post_id=$blogPost->id;
             if($model->validate()){
+                $model->scenario = NULL;
+                $model->save();
                 $cookie=new CHttpCookie('comment_name',$model->name);
                 Yii::app()->request->cookies['comment_name']=$cookie;
                 $cookie=new CHttpCookie('comment_mail',$model->mail);
                 Yii::app()->request->cookies['comment_mail']=$cookie;
-                $model->save();
                 unset($_POST['BlogComment']);
                 $model = new BlogComment;
                 

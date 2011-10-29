@@ -12,7 +12,7 @@ endforeach;
 echo implode('|',$llar);
 ?></div>
         </div><div id="site_title" class="ufont">
-            <a href="/" class="nd" title="<?=Yii::t('main','Paunin Dmitriy')?>"><?=Yii::t('main','Paunin Dmitriy')?></a>
+            <a href="/" class="nd" title="<?=Yii::t('main','Dmitriy Paunin')?>"><?=Yii::t('main','Dmitriy Paunin')?></a>
         </div><div id="site_under_title" class="ufont">
             <?=Yii::t('main','original business solutions')?>
         </div>

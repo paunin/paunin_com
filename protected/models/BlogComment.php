@@ -46,7 +46,7 @@ class BlogComment extends CActiveRecord
            'HTML.MaxImgLength'=>'800',
            'CSS.MaxImgLength'=>'800',
            'Filter.YouTube'=>true,
-		   //'HTML.Nofollow'=>true,
+    	   //'HTML.Nofollow'=>true,
        );
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
@@ -54,12 +54,15 @@ class BlogComment extends CActiveRecord
 			array('post_id, name, text', 'required'),
 			array('post_id', 'numerical', 'integerOnly'=>true),
 			array('mail, name', 'length', 'max'=>255),
-            array('captcha', 'required'),
-            array('captcha', 'captcha', 'captchaAction' => 'site/captcha'),
+           
+            //array('captcha', 'required'),
+            
+            //
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('name, text','filter','filter'=>array($purif,'purify')),
 			array('id, post_id, mail, name, text, created_at', 'safe', 'on'=>'search'),
+            array('captcha','application.extensions.recaptcha.EReCaptchaValidator','privateKey'=>'6Ld0lMkSAAAAAGQjGvwiNsMvQEnXPRaV2SE8x1Bi','on' => 'addcomment'),
 		);
 	}
 
@@ -90,7 +93,10 @@ class BlogComment extends CActiveRecord
 			'created_at' => 'Created At',
 		);
 	}
-
+    public function save(){
+       unset($this->captcha);
+       parent::save();
+    }
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
@@ -114,3 +120,15 @@ class BlogComment extends CActiveRecord
 		));
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+

@@ -7,15 +7,7 @@ class SiteController extends Controller{
 	 */
 	public function actions(){
 		return array(
-			// captcha action renders the CAPTCHA image displayed on the contact page
-			'captcha'=>array(
-                'class'=>'MyCCaptchaAction',
-				'backColor'=>0xFFFFFF,
-                'testLimit'=> 7,
-                'maxLength'=> 3,
-                'minLength'=> 3,
-                //'border'=>'solid 1px black'
-			),
+
 			// page action renders "static" pages stored under 'protected/views/site/pages'
 			// They can be accessed via: index.php?r=site/page&view=FileName
 			'page'=>array(
