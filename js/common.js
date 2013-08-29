@@ -28,7 +28,8 @@ function scrollto(elemId){
 }
 // main ready
 $(document).ready(function(){
-    $('body').show();
+    $('body').toggleClass('hidden');
+//    alert('s');
     make_in();
            
 });

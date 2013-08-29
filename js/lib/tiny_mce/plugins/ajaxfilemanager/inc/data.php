@@ -1,8 +1,8 @@
 <pre>Array
 (
-    [currentFolderPath] => ../../../../../content/
-    [new_folder] => blog
+    [currentFolderPath] => ../../../../../content/blog/
+    [new_folder] => funnyss
 )
 </pre>
 
-14/Jun/2011 00:09:43
+15/Jul/2012 04:09:38

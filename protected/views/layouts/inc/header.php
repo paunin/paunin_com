@@ -26,4 +26,4 @@ $cs = Yii::app()->clientScript;
     	</script>
     <![endif]-->
 </head>
-<body>
+<body class="hidden"> 

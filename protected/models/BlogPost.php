@@ -40,6 +40,17 @@ class BlogPost extends CActiveRecord
 	 */
 	public function rules()
 	{
+	$purif=new CHtmlPurifier();
+       $purif->options=array(
+           'AutoFormat.Linkify'=>true,
+           'HTML.ForbiddenElements'=>array('b'),
+           'HTML.MaxImgLength'=>'800',
+           'CSS.MaxImgLength'=>'800',
+           'Filter.YouTube'=>true,
+    	   'HTML.Nofollow'=>true,
+       );
+
+
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
@@ -50,6 +61,7 @@ class BlogPost extends CActiveRecord
 			array('abbr', 'length', 'max'=>255),
 			array('tags', 'length', 'max'=>1024),
 			array('rubrics', 'length', 'max'=>4096),
+			array('title, preview, text','filter','filter'=>array($purif,'purify')),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, title, abbr, preview, text, tags, rubrics, created_at', 'safe', 'on'=>'search'),

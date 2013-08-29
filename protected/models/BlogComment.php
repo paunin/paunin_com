@@ -46,7 +46,7 @@ class BlogComment extends CActiveRecord
            'HTML.MaxImgLength'=>'800',
            'CSS.MaxImgLength'=>'800',
            'Filter.YouTube'=>true,
-    	   //'HTML.Nofollow'=>true,
+    	   'HTML.Nofollow'=>true,
        );
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.

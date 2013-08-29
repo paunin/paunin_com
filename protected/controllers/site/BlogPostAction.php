@@ -31,7 +31,7 @@ class BlogPostAction extends Action
         {
             $model->attributes=$_POST['BlogComment'];
             $model->post_id=$blogPost->id;
-            if($model->validate()){
+            if($model->validate() && false){
                 $model->scenario = NULL;
                 $model->save();
                 $cookie=new CHttpCookie('comment_name',$model->name);

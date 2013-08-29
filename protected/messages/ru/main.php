@@ -2,7 +2,7 @@
 return array(
     'Dmitriy Paunin' => 'Дмитрий Паунин',
     'Paunin Dmitriy' => 'Паунин Дмитрий',
-    'original business solutions'=>'оригинальные бизнес решения',
+    'Original Business Solutions'=>'Оригинальные Бизнес Решения',
     'English'=>'Английский',
     'Russian'=>'Русский',
     'Copyright'=>'Copyright',

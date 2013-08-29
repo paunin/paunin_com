@@ -14,7 +14,7 @@ echo implode('|',$llar);
         </div><div id="site_title" class="ufont">
             <a href="/" class="nd" title="<?=Yii::t('main','Dmitriy Paunin')?>"><?=Yii::t('main','Dmitriy Paunin')?></a>
         </div><div id="site_under_title" class="ufont">
-            <?=Yii::t('main','original business solutions')?>
+            <?=Yii::t('main','Original Business Solutions')?>
         </div>
         <div id="main_container">
        <?=$content?>
