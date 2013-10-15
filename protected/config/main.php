@@ -1,5 +1,5 @@
 <?php
-
+date_default_timezone_set("Europe/London");
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
 
