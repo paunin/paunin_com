@@ -4,7 +4,7 @@ class ContentAction extends Action
 {    
     public function run()
     {
-        if (!$_GET['content']){
+        if (empty($_GET['content'])){
             $_GET['content']='index';
             //throw new CHttpException(404,Yii::t('main','Content not found. Check URL please.'));       
         }    

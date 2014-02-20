@@ -3,7 +3,7 @@
 
     <script type="text/javascript">
         $(document).ready(function(){
-           <?php if(!($_POST['BlogComment'])):?> $('#BlogComment').addClass('hhh');<?php else:?>$('#BlogCommentHolder').hide();scrollto('BlogComment');<?php endif;?>
+           <?php if(empty($_POST['BlogComment'])):?> $('#BlogComment').addClass('hhh');<?php else:?>$('#BlogCommentHolder').hide();scrollto('BlogComment');<?php endif;?>
         })
     </script>
 

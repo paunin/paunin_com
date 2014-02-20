@@ -1,0 +1,11 @@
+<rsp stat="ok">
+	<list>
+			<widget id="smart_ott">
+				<title>Smartbox</title>
+				<compression size="999" type="zip"/>
+				<description>Smartbox widget</description>
+				<download>http://paunin.com/content/smartbox.zip</download>
+			</widget>
+	</list>
+</rsp>
+

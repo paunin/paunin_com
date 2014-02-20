@@ -14,7 +14,7 @@ class tagsCloudWidget extends CWidget
         $tags=BlogTag::model()->findAll();
         foreach($tags as $tag){
             $tags_count[$tag->id] = (count($tag->blogPosts));
-            $overall+=$tags_count[$tag->id];
+            $this->overall+=$tags_count[$tag->id];
         }
         $this->render(__CLASS__,array('tags'=>$tags,'overall'=>$this->overall,'tags_count'=>$this->tags_count));
     }

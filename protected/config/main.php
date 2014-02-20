@@ -103,7 +103,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=paunin_com',
 			'emulatePrepare' => true,
 			'username' => 'paunin_com',
-			'password' => 'paunin_com_2010',
+			'password' => 'paunin_com2014',
 			'charset' => 'utf8',
 		),
 		

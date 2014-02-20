@@ -17,7 +17,7 @@ class BlogAction extends Action
         $this->controller->title='Блог';
         $this->content_abbr='blog';
         
-        $this->page=(int)$_GET['page']?(int)$_GET['page']:0;
+        $this->page=!empty($_GET['page'])?(int)$_GET['page']:0;
         
     
         $this->list=new BlogPost($criteria);

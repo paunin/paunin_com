@@ -6,7 +6,7 @@ die();
  */
 
 // change the following paths if necessary
-$yii=dirname(__FILE__).'/protected/_symlinks/framework/yii.php';
+$yii=dirname(__FILE__).'/framework/yii.php';
 $config=dirname(__FILE__).'/protected/config/test.php';
 
 // remove the following line when in production mode

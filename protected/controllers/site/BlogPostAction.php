@@ -43,8 +43,8 @@ class BlogPostAction extends Action
                 
             }
         }
-            $model->name=Yii::app()->request->cookies['comment_name']->value;
-            $model->mail=Yii::app()->request->cookies['comment_mail']->value;
+            $model->name=!empty(Yii::app()->request->cookies['comment_name'])?Yii::app()->request->cookies['comment_name']->value:'';
+            $model->mail=!empty(Yii::app()->request->cookies['comment_mail'])?Yii::app()->request->cookies['comment_mail']->value:'';
 
             //$model->name=Yii::app()->request->cookies[]
 
