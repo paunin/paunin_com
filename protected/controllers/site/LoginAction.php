@@ -21,14 +21,14 @@ class LoginAction extends Action
             {
                 if($this->form->save()){
                     $this->form=new login;
-                    $_GET['go_back_t']=$_GET['go_back'];
+                    $_GET['go_back_t']=!empty($_GET['go_back'])?$_GET['go_back']:null;
                     return true;
                     
                 }else{
                     return false;
                 }
             }
-        }elseif($_GET['logout'])
+        }elseif(!empty($_GET['logout']))
             Yii::app()->user->logout();
        
     }

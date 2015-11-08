@@ -3,7 +3,7 @@
     
     <script type="text/javascript">
         $(document).ready(function(){
-           <?php if(!($_GET['id']||$_GET['new'])):?> $('.forma').addClass('hhh');<?php endif;?>
+           <?php if(empty($_GET['id'])&& empty($_GET['new'])):?> $('.forma').addClass('hhh');<?php endif;?>
         })
     </script>
 </div>

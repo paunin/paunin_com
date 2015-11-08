@@ -26,7 +26,7 @@ class ContentAction extends Action
         
         
         
-        if($_GET['id']){
+        if(!empty($_GET['id'])){
             $tform=$this->form->findByPk($_GET['id']);
             if($tform)
                 $this->form=$tform;
@@ -52,9 +52,9 @@ class ContentAction extends Action
     {
         $this->controller->title='Управление страницами';
         
-        $this->page=(int)$_GET['page']?(int)$_GET['page']:0;
+        $this->page=!empty($_GET['page'])?(int)$_GET['page']:0;
         
-        if($_GET['id_delete']){
+        if(!empty($_GET['id_delete'])){
             $this->list=new Content;
             $to_del=$this->list->findByPk($_GET['id_delete']);
             if($to_del)
