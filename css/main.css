@@ -25,6 +25,10 @@ body {
     width: 100%;
 }
 
+#background div:hover{
+    opacity: 1;
+}
+
 #content_wrapper {
     width: 100%;
     text-align: center;
