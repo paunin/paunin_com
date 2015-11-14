@@ -25,7 +25,7 @@ $(document).ready(function () {
 
     $(".img-inst").on("load", function () {
         $(this).parent().animate({
-            opacity: 1
+            opacity: 0.9
         }, 3000);
     }).each(function () {
         if (this.complete) {
