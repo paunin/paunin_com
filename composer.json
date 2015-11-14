@@ -1,0 +1,16 @@
+{
+    "name": "paunin/paunin-site",
+    "authors": [
+        {
+            "name": "paunin",
+            "email": "d.m.paunin@gmail.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Paunin\\": "./"
+        }
+    }
+}
