@@ -9,7 +9,7 @@ function resize() {
     var newSize = initImgSize + rem / div;
 
     console.log(newSize);
-    $('.img-bgr').width(newSize);
+    $('.img-bgr').width(newSize).height(newSize);
 }
 $(document).ready(function () {
 
