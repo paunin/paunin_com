@@ -46,7 +46,7 @@ $(document).ready(function () {
         var column = Math.floor(currentMousePos.x / curImageSize);
         var row = Math.floor(currentMousePos.y / curImageSize);
 
-        imgNum = row * numImages + column;
+        var imgNum = row * numImages + column;
 
         if (lastSeen != imgNum) {
 
