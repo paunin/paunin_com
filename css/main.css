@@ -1,18 +1,23 @@
 body {
     font-family: arial, serif;
+    overflow-x: hidden;
 }
 
 #background_wrapper {
-    width: 100%;
+    width: 150%;
     position: absolute;
     overflow: hidden;
     max-height: 2000px;
-    align-content: center;
+    margin-left: -25%;
+    margin-top: -90px;
 }
 
 #background {
-    width: 120%;
+    width: 2000px;
     opacity: 0.9;
+    margin: 0 auto;
+    height: 200px;
+    text-align: center;
 }
 
 #background img {
