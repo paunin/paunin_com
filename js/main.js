@@ -1,4 +1,4 @@
-var initImgSize = 500;
+var initImgSize = 200;
 var curImageSize = initImgSize;
 var minOpacity = 0.2;
 
@@ -15,7 +15,7 @@ function resize() {
 $(document).ready(function () {
 
 
-    for (var i = 0; i < 120; i++) {
+    for (var i = 0; i < 500; i++) {
         $('#background').append('<div id="img_bgr_' + i + '" class="img-bgr img-bgr-' + i + '" data-img-number="' + i + '"></div>')
     }
     resize();
