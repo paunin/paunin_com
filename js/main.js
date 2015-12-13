@@ -1,4 +1,4 @@
-var initImgSize = 200;
+var initImgSize = 500;
 var curImageSize = initImgSize;
 var minOpacity = 0.2;
 
