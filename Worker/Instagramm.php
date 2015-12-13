@@ -19,7 +19,7 @@ class Instagramm
     /**
      * @var int
      */
-    protected $numOfPictures = 100;
+    protected $numOfPictures = 500;
     /**
      * @var
      */
