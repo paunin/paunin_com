@@ -4,7 +4,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $worker = new \Paunin\Worker\Instagramm(
     '370236096',
     '370236096.96711f8.595aee91a6bf48989f0066ba19d646f6',
-    200,
+    500,
     __DIR__ . '/../media'
 );
 $worker->extract();
