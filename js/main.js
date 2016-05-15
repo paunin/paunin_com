@@ -11,6 +11,11 @@ function resize() {
     curImageSize = initImgSize + rem / div;
 
     $('.img-bgr').width(curImageSize).height(curImageSize);
+
+    // link for more-photos
+    var topPosition = $('#background_wrapper').height() - 62;
+
+    $('.more-photos').css({'top': topPosition+'px', 'display': 'block'});
 }
 $(document).ready(function () {
 
