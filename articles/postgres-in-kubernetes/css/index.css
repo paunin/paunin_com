@@ -57,6 +57,17 @@ article a:hover {
     color: #ff5700;
 }
 
+article a.comments{
+    display: block;
+    background: black;
+    color: white;
+    text-decoration: none;
+    margin-left: auto;
+    text-align: right;
+    padding: 20px;
+    font-size: 25px;
+}
+
 article h1 {
     font-size: 30px;
     color: #151414;
