@@ -50,7 +50,11 @@ article code {
 }
 
 article a {
-    color: #a06c0d;
+    color: #882f00;
+}
+article a:hover {
+    text-decoration: none;
+    color: #ff5700;
 }
 
 article h1 {
