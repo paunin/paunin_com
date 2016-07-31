@@ -31,18 +31,22 @@
     <!-- main article ---------------------------------------------------------------------------------------------- -->
 
 
-    <h1 class="title"><a href="../" title="Cloud of links to different articles">Articles</a> > Postgresql cluster into Kubernetes cluster</h1>
+    <h1 class="title"><a href="../" title="Cloud of links to different articles">Articles</a> > Postgresql cluster into
+        Kubernetes cluster</h1>
     <div class="post__body post__body_full">
-        <div class="content html_format"><p>If you've ever thought about trust and hope, you're not likely to have
-            experienced it anything as much as you have a database management system. Well, really, this is what a
-            database is! The title conveys the whole point — a place where data is kept, the main task is to STORE. And
-            the saddest thing, as always, once these beliefs crash into the ruins of a downed production database.
-            <img src="https://habrastorage.org/files/d62/332/729/d623327292574df092061ab96c012b10.png">
-            And what do I do — you ask? Do not deploy anything on the servers — we answer. Nothing unless it can recover
-            itself, at least temporarily but reliably and quickly.</p>
+        <div class="content html_format">
+            <p>If you've ever thought about trust and hope, you're not likely to have
+                experienced it anything as much as you have a database management system. Well, really, this is what a
+                database is! The title conveys the whole point — a place where data is kept, the main task is to STORE.
+                And
+                the saddest thing, as always, once these beliefs crash into the ruins of a downed production database.
+                <img src="https://habrastorage.org/files/d62/332/729/d623327292574df092061ab96c012b10.png">
+                And what do I do — you ask? Do not deploy anything on the servers — we answer. Nothing unless it can
+                recover
+                itself, at least temporarily but reliably and quickly.</p>
             <p>In this article, I will try to talk about my experience of configuring a built to last a lifetime
                 Postgresql cluster within another failover solution from Google — Kubernetes (aka k8s).</p><a
-                    name="habracut"></a>
+                name="habracut"></a>
             <h2>Table of Contents</h2>
             <p>The article came out slightly longer than expected, and therefore you'll find many links in the text —
                 mainly to the code within the given context.
@@ -98,13 +102,13 @@
 
             <p>In the diagram, it will look like this:</p>
             <div class="spoiler_text">
-            <pre><code class="hljs gherkin">master (primary node1)  --\
-|<span class="hljs-string">- slave1 (node2)       ---\     / balancer \
-</span>|<span class="hljs-string">  </span>|<span class="hljs-string">- slave2 (node3)    ----</span>|<span
-                        class="hljs-string">---</span>|<span class="hljs-string">            </span>|<span
-                        class="hljs-string">----client
-</span>|<span class="hljs-string">- slave3 (node4)       ---/     \ balancer /
-   </span>|<span class="hljs-string">- slave4 (node5)    --/</span></code></pre>
+            <pre><code>
+master (primary node1)  --\
+|- slave1 (node2)       ---\     / balancer \
+|  |- slave2 (node3)    ----|---|            |----client
+|- slave3 (node4)       ---/     \ balancer /
+   |- slave4 (node5)    --/
+            </code></pre>
             </div>
             <p>Assume the input data:</p>
             <ul>
@@ -227,10 +231,12 @@
                         href="https://github.com/paunin/postgres-docker-cluster/blob/master/configs/postgresql.conf">with
                     the configuration to enable Streaming Replication</a></p>
             <div class="spoiler"><b class="spoiler_title">What you should pay attention to in the configuration file</b>
-                <div class="spoiler_text"><pre><code class="hljs ini"><span class="hljs-attr">wal_level</span> = hot_standby
-<span class="hljs-attr">max_wal_senders</span> = <span class="hljs-number">5</span>
-<span class="hljs-attr">wal_keep_segments</span> = <span class="hljs-number">5001</span>
-<span class="hljs-attr">hot_standby</span> = <span class="hljs-literal">on</span></code></pre>
+                <div class="spoiler_text"><pre><code>
+wal_level = hot_standby
+max_wal_senders = 5
+wal_keep_segments = 5001
+hot_standby = on
+                </code></pre>
 
                     <p>All parameters have short description in comments, but all you need to know is that with this
                         configuration we anable access to read <a
@@ -389,14 +395,20 @@
     </div>
 
 
-
     <!-- /main article --------------------------------------------------------------------------------------------- -->
 
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-19825912-1', 'auto');
         ga('send', 'pageview');
