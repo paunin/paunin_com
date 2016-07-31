@@ -22,7 +22,7 @@
 <!-- Your embedded comments code -->
 
 <div id="header">
-    <a href="/"><img title="Why do you check the title? :P Just click!" id="logo" src="../../images/logo.png"/></a>
+    <a rel="nofollow" href="/"><img title="Why do you check the title? :P Just click!" id="logo" src="../../images/logo.png"/></a>
 </div>
 
 <article>
@@ -31,7 +31,7 @@
     <!-- main article ---------------------------------------------------------------------------------------------- -->
 
 
-    <h1 class="title"><a href="../" title="Cloud of links to different articles">Articles</a> > Postgresql cluster into
+    <h1 class="title"><a rel="nofollow" href="../" title="Cloud of links to different articles">Articles</a> > Postgresql cluster into
         Kubernetes cluster</h1>
     <div class="post__body post__body_full">
         <div class="content html_format">
@@ -53,25 +53,25 @@
                 Additionally, I have enclosed the Table of Contents for the impatient ones to go directly to the results
                 of my experiment.</p>
             <ul>
-                <li><a href="#task">Task</a></li>
-                <li><a href="#solution_google">Googled solution</a>
+                <li><a rel="nofollow" href="#task">Task</a></li>
+                <li><a rel="nofollow" href="#solution_google">Googled solution</a>
                     <ul>
-                        <li><a href="#solution_bad">Bad and unacceptable solutions</a></li>
+                        <li><a rel="nofollow" href="#solution_bad">Bad and unacceptable solutions</a></li>
                     </ul>
                 </li>
-                <li><a href="#solution_my">Consolidating and assembling the solution</a>
+                <li><a rel="nofollow" href="#solution_my">Consolidating and assembling the solution</a>
                     <ul>
-                        <li><a href="#solution_my_streaming">Primary and standby instead of master and slave</a></li>
-                        <li><a href="#solution_my_repmgr">Split-brain and selection of a new leader in the cluster</a>
+                        <li><a rel="nofollow" href="#solution_my_streaming">Primary and standby instead of master and slave</a></li>
+                        <li><a rel="nofollow" href="#solution_my_repmgr">Split-brain and selection of a new leader in the cluster</a>
                         </li>
-                        <li><a href="#solution_my_pgpool">Pgpool-II — pool of connections</a></li>
+                        <li><a rel="nofollow" href="#solution_my_pgpool">Pgpool-II — pool of connections</a></li>
                     </ul>
                 </li>
-                <li><a href="#result">Result</a></li>
-                <li><a href="#doc">Documentation and used material</a></li>
+                <li><a rel="nofollow" href="#result">Result</a></li>
+                <li><a rel="nofollow" href="#doc">Documentation and used material</a></li>
             </ul>
 
-            <a name="task"></a>
+            <a rel="nofollow" name="task"></a>
             <h2>Task</h2>
             <p>Almost any application needs to have a data store. This is a necessity. Making this data store resistant
                 to faults in a network or on physical servers is common courtesy of a good system architect. Another
@@ -116,7 +116,7 @@ master (primary node1)  --\
                 <li>Linear load growth up to 2x of the average</li>
             </ul>
 
-            <a name="solution_google"></a>
+            <a rel="nofollow" name="solution_google"></a>
             <h2>Googled solution</h2>
             <p>Having some experience in solving IT problems, I decided to ask the collective mind of Google, "postgres
                 cluster kubernetes" — what I got was a bunch of information junk, then I tried "postgres cluster docker"
@@ -132,7 +132,7 @@ master (primary node1)  --\
                     repository for Galera(Mysql cluster)</a></p>
             <p>Google has made it clear that I have to look for a solution myself and more than that, do it manually
                 (sigh, at least I have a bunch of scattered articles to browse through). </p>
-            <a name="solution_bad"></a>
+            <a rel="nofollow" name="solution_bad"></a>
             <h3>Bad and unacceptable solutions</h3>
             <p>Let me make it clear, all the points in this paragraph are based on my subjective opinion and therefore
                 might seem quite viable to you. However, based on my experience, I had to cut them off.</p>
@@ -212,13 +212,13 @@ master (primary node1)  --\
                         rather than relational databases.</p></div>
             </div>
 
-            <a name="solution_my"></a>
+            <a rel="nofollow" name="solution_my"></a>
             <h2>Consolidating and assembling the solution</h2>
             <p>In the examples below you will see what a solution should ideally look like, while the code will show my
                 own implementation. To create a cluster, you don't necessarily have to have Kubernetes (there's a
                 docker-compose example) or Docker at all. Just then all this post will be useful not as a CPM solution
                 (copy-paste-modify) but as an installation manual with snippets.</p>
-            <a name="solution_my_streaming"></a>
+            <a rel="nofollow" name="solution_my_streaming"></a>
             <h3>Primary and standby instead of master and slave</h3>
             <p>So why did colleagues from Postgresql refuse to use terms "master" and "slave"? Hmm, I could be wrong but
                 there was a rumor that it's because of non-Political Correctness, we all know that <a
@@ -242,7 +242,7 @@ hot_standby = on
                         configuration we anable access to read <a
                                 href="https://www.postgresql.org/docs/9.5/static/wal-intro.html">WAL logs</a> for
                         clients and allow execute queries during recovery. You can find interesting article about it on
-                        <a href="https://wiki.postgresql.org/wiki/Streaming_Replication">Postgresql Wiki</a>. </p></div>
+                        <a rel="nofollow" href="https://wiki.postgresql.org/wiki/Streaming_Replication">Postgresql Wiki</a>. </p></div>
             </div>
 
             <p>As soon as the primary server of the cluster starts up, we move on to start the standby one, which
@@ -251,7 +251,7 @@ hot_standby = on
                     href="https://hub.docker.com/r/paunin/postgresql-cluster-pgsql/">Docker Image</a>, which would work
                 differently depending on the mode, namely the following way:</p>
             <ul>
-                <li><a href="https://github.com/paunin/postgres-docker-cluster/blob/master/bin/primary.entrypoint.sh">For
+                <li><a rel="nofollow" href="https://github.com/paunin/postgres-docker-cluster/blob/master/bin/primary.entrypoint.sh">For
                     primary</a>:
                     <ul>
                         <li>Configures Repmgr (more about it later)</li>
@@ -267,7 +267,7 @@ hot_standby = on
                         </li>
                     </ul>
                 </li>
-                <li><a href="https://github.com/paunin/postgres-docker-cluster/blob/master/bin/standby.entrypoint.sh">For
+                <li><a rel="nofollow" href="https://github.com/paunin/postgres-docker-cluster/blob/master/bin/standby.entrypoint.sh">For
                     standby</a>:
                     <ul>
                         <li>Clones the primary server via Repmgr (by the way, with all configs as it simply copies the
@@ -294,13 +294,13 @@ hot_standby = on
             <p>The difference between the first and the second standby layers is that ANY server from the first layer
                 can act as master for a second layer server. Do not forget that the second layer should start after the
                 first with a time delay.</p>
-            <a name="solution_my_repmgr"></a>
+            <a rel="nofollow" name="solution_my_repmgr"></a>
             <h3>Split-brain and selection of a new leader in the cluster</h3>
-            <p><a href="https://en.wikipedia.org/wiki/Split-brain_(computing)">Split brain</a> — a situation in which
+            <p><a rel="nofollow" href="https://en.wikipedia.org/wiki/Split-brain_(computing)">Split brain</a> — a situation in which
                 different segments of a cluster can create/elect a new master and think that the problem is solved.</p>
 
             <p><img src="https://habrastorage.org/files/d46/9c9/911/d469c9911dd2444ab834f6a00e1d4b67.png"></p>
-            <p>This is one but not the only problem that <a href="https://github.com/2ndQuadrant/repmgr">Repmgr</a>
+            <p>This is one but not the only problem that <a rel="nofollow" href="https://github.com/2ndQuadrant/repmgr">Repmgr</a>
                 helped me to solve.</p>
             <p>Essentially, this is a manager that can:</p>
             <ul>
@@ -321,7 +321,7 @@ hot_standby = on
                 attempts to parse the current structure of the cluster and determine which will be the next master.
                 Certainly, Repmgr is intelligent enough to elect the only correct master and avoid creating a Split
                 Brain situation.</p>
-            <a name="solution_my_pgpool"></a>
+            <a rel="nofollow" name="solution_my_pgpool"></a>
             <h3>Pgpool-II —
                 <del>swiming</del>
                 pool of connections
@@ -341,19 +341,19 @@ hot_standby = on
             <p>As a conclusion, I have created quite a simple <a
                     href="https://hub.docker.com/r/paunin/postgresql-cluster-pgpool/">Docker Image</a>, which at startup
                 configures itself to work with a set of nodes and users who will be able to be authorized through MD5
-                authorization via Pgpool (<a href="http://www.pgpool.net/docs/latest/pgpool-en.html#md5">this bit
+                authorization via Pgpool (<a rel="nofollow" href="http://www.pgpool.net/docs/latest/pgpool-en.html#md5">this bit
                     happened to be a bit more complicated than I thought</a>)</p>
             <p>Far too often you need to get rid of a single point of failure to suffice, and in our situation this
                 point is a pgpool service that is proxying all requests and thus can become the weakest chain in the
                 path to data access.
                 Fortunately, k8s comes handy allowing us to create as many replications of the service as needed.</p>
 
-            <p>Sadly that this <a href="https://github.com/paunin/postgres-docker-cluster/tree/master/k8s">Kubernetes
+            <p>Sadly that this <a rel="nofollow" href="https://github.com/paunin/postgres-docker-cluster/tree/master/k8s">Kubernetes
                 example</a> is missing the part about creating replications, but if you are aware of how <a
                     href="http://kubernetes.io/docs/user-guide/replication-controller/">Replication Controller</a>
-                and/or <a href="http://kubernetes.io/docs/user-guide/deployments/">Deployment</a> works, it'll be no
+                and/or <a rel="nofollow" href="http://kubernetes.io/docs/user-guide/deployments/">Deployment</a> works, it'll be no
                 trouble to pull the configuration off.</p>
-            <a name="result"></a>
+            <a rel="nofollow" name="result"></a>
             <h2>Result</h2>
             <p>This article is not a retelling of the scripts to solve the problem, rather, it is a description of the
                 structure of the solution. The former means that to better understand and optimize the solution, you
@@ -361,35 +361,35 @@ hot_standby = on
                         href="https://github.com/paunin/postgres-docker-cluster#streaming-replication-cluster-for-pgsql--pgpool2">README.md
                     on github</a>, which is step-by-step and meticulously explains how to start up the cluster for
                 docker-compose and Kubernetes. In addition, for those who will appreciate what I wrote and decide to
-                move beyond the proposed solution, I am willing to lend a <a href="mailto:d.m.paunin@gmail.com">virtual
+                move beyond the proposed solution, I am willing to lend a <a rel="nofollow" href="mailto:d.m.paunin@gmail.com">virtual
                     helping hand</a>.</p>
             <p>
                 <img src="https://habrastorage.org/getpro/habr/post_images/145/f27/ef2/145f27ef257488cec5209bbde4520900.jpg">
             </p>
             <ul>
-                <li><a href="https://github.com/paunin/postgres-docker-cluster">Sources and documentation on Github</a>
+                <li><a rel="nofollow" href="https://github.com/paunin/postgres-docker-cluster">Sources and documentation on Github</a>
                 </li>
-                <li><a href="https://hub.docker.com/r/paunin/postgresql-cluster-pgsql/">Docker Image for cluster-ready
+                <li><a rel="nofollow" href="https://hub.docker.com/r/paunin/postgresql-cluster-pgsql/">Docker Image for cluster-ready
                     Postgresql from the example</a></li>
-                <li><a href="https://hub.docker.com/r/paunin/postgresql-cluster-pgpool/">Docker Image for Pgpool with
+                <li><a rel="nofollow" href="https://hub.docker.com/r/paunin/postgresql-cluster-pgpool/">Docker Image for Pgpool with
                     configuration through ENV variables</a></li>
             </ul>
 
-            <a name="doc"></a>
+            <a rel="nofollow" name="doc"></a>
             <h2>Documentation and used material</h2>
             <ul>
-                <li><a href="https://wiki.postgresql.org/wiki/Streaming_Replication">Streaming replication in
+                <li><a rel="nofollow" href="https://wiki.postgresql.org/wiki/Streaming_Replication">Streaming replication in
                     postgres</a></li>
-                <li><a href="https://github.com/2ndQuadrant/repmgr">Repmgr</a></li>
-                <li><a href="http://www.pgpool.net/docs/latest/pgpool-en.html">Pgpool2</a></li>
-                <li><a href="http://kubernetes.io/">Kubernetes</a></li>
+                <li><a rel="nofollow" href="https://github.com/2ndQuadrant/repmgr">Repmgr</a></li>
+                <li><a rel="nofollow" href="http://www.pgpool.net/docs/latest/pgpool-en.html">Pgpool2</a></li>
+                <li><a rel="nofollow" href="http://kubernetes.io/">Kubernetes</a></li>
             </ul>
             <h4>PS:</h4>
             <p>I hope you have found the article helpful. Have a positive summer everyone! Good luck and good mood,
                 colleagues ;)</p>
             <h4>PPS:</h4>
-            <p><a href="https://habrahabr.ru/post/301370/">The original article</a> was writen in Russian, so thanks to
-                <a href="https://www.facebook.com/sergey.rodin">Sergey Rodin</a> and <a
+            <p><a rel="nofollow" href="https://habrahabr.ru/post/301370/">The original article</a> was writen in Russian, so thanks to
+                <a rel="nofollow" href="https://www.facebook.com/sergey.rodin">Sergey Rodin</a> and <a
                         href="https://www.facebook.com/tom.wickings">Tom Wickings</a> for help to translate it!</p>
         </div>
     </div>
@@ -415,7 +415,7 @@ hot_standby = on
 
     </script>
 
-    <a class="comments" name="comments" href="#comments" title="Don't hesitate">Comments</a>
+    <a rel="nofollow" class="comments" name="comments" href="#comments" title="Don't hesitate">Comments</a>
     <div class='fb-comments' data-numposts='25' data-width='900'></div>
 </article>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-579c5384d779f3e0"></script>
