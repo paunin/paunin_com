@@ -9,19 +9,24 @@
 </head>
 <body>
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
+<script>(function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
+    js = d.createElement(s);
+    js.id = id;
     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=1045187992224811";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-comment-embed"
+
+     data-width="500"></div>
 <div id="header">
     <a href="/"><img id="logo" src="../../images/logo.png"/></a>
 </div>
 
 <!-- main article -->
 <article>
+
     <h1 class="title">Postgresql cluster into Kubernetes cluster</h1>
     <div class="post__body post__body_full">
         <div class="content html_format"><p>If you've ever thought about trust and hope, you're not likely to have
@@ -96,7 +101,7 @@
                         class="hljs-string">----client
 </span>|<span class="hljs-string">- slave3 (node4)       ---/     \ balancer /
    </span>|<span class="hljs-string">- slave4 (node5)    --/</span></code></pre>
-</div>
+            </div>
             <p>Assume the input data:</p>
             <ul>
                 <li>Increased number of read requests (in relation to a database record)</li>
@@ -369,7 +374,7 @@
                 <li><a href="http://www.pgpool.net/docs/latest/pgpool-en.html">Pgpool2</a></li>
                 <li><a href="http://kubernetes.io/">Kubernetes</a></li>
             </ul>
-
+            <div class="fb-comment-embed" data-width="800" data-include-parent="false"></div>
             <h4>PS:</h4>
             <p>I hope you have found the article helpful. Have a positive summer everyone! Good luck and good mood,
                 colleagues ;)</p>
@@ -381,10 +386,11 @@
 
     </div>
 
-    <div class="fb-comment-embed" data-width="800" data-include-parent="false"></div>
+    <script>
+        document.write('<div class="fb-comment-embed" data-href="' + window.location.href + '" data-width="800" data-include-parent="false"></div>');
+    </script>
+
 </article>
-
-
 
 
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
