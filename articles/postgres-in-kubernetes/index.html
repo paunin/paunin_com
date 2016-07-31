@@ -8,18 +8,18 @@
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
 </head>
 <body>
+<!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
-<script>(function (d, s, id) {
+<script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=1045187992224811";
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=256908007791921";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<div class="fb-comment-embed"
 
-     data-width="500"></div>
+<!-- Your embedded comments code -->
+
 <div id="header">
     <a href="/"><img id="logo" src="../../images/logo.png"/></a>
 </div>
@@ -387,9 +387,8 @@
     </div>
 
     <script>
-        document.write('<div class="fb-comment-embed" data-href="' + window.location.href + '" data-width="800" data-include-parent="false"></div>');
+        document.write("<div class='fb-comments' data-href='" + window.location.href + "' data-numposts='25' data-width='900'></div>");
     </script>
-
 </article>
 
 
