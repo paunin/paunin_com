@@ -23,6 +23,11 @@ article {
     margin: auto;
     font-family: verdana, arial, helvetica, sans-serif;
     margin-bottom: 40px;
+    font-size: 15px;
+}
+
+article p{
+    line-height: 140%;
 }
 
 article img {
@@ -40,13 +45,14 @@ article br {
 article .spoiler_text {
     padding-left: 20px;
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
     border-left: 1px dashed #514f4d;
     font-size: 90%;
 }
 
 article code {
-    font-size: 120%;
+    color: #3a3937;
+    font-size: 110%;
 }
 
 article a {
@@ -89,6 +95,15 @@ article h3 {
     font-size: 25px;
     font-weight: normal;
     color: #414141;
+    margin-bottom: 15px;
+}
+
+article h4 {
+    margin-bottom: 11px;
+}
+
+article ul li{
+    margin-top: 5px;
 }
 
 #content {
