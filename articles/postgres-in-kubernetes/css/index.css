@@ -13,7 +13,7 @@
 }
 
 .title {
-    background: #1d1d1d;
+    background: #000000;
     color: #ffffff;
     padding: 20px;
 }
@@ -63,7 +63,8 @@ article a.comments{
     color: white;
     text-decoration: none;
     margin-left: auto;
-    text-align: right;
+    margin-right: auto;
+    text-align: center;
     padding: 20px;
     font-size: 25px;
 }
