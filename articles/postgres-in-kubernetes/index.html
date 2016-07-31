@@ -8,9 +8,19 @@
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=1045187992224811";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div id="header">
     <a href="/"><img id="logo" src="../../images/logo.png"/></a>
 </div>
+
+<!-- main article -->
 <article>
     <h1 class="title">Postgresql cluster into Kubernetes cluster</h1>
     <div class="post__body post__body_full">
@@ -371,13 +381,13 @@
 
     </div>
 
-    <a class="comments" href="https://www.reddit.com/r/cloudcomputing/comments/4vb80s/postgresql_cluster_into_kubernetes_cluster/">Comments >>></a>
-
+    <div class="fb-comment-embed" data-width="800" data-include-parent="false"></div>
 </article>
+
+
+
+
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-579c5384d779f3e0"></script>
-
-
-
 </body>
 </html>
