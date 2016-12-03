@@ -60,7 +60,7 @@ class Instagramm
             unlink($dest);
         }
 
-        link($this->saveDir . "/" . $fileName, $this->displayDir . "/" . $count . ".jpg");
+        symlink($this->saveDir . "/" . $fileName, $this->displayDir . "/" . $count . ".jpg");
     }
 
     protected function log($text)
