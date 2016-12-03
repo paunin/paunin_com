@@ -26,7 +26,7 @@ $(document).ready(function () {
     resize();
 
     $('.img-bgr').each(function (index) {
-        $(this).append('<img class="img-inst" src="./media/' + index + '.jpg"/>');
+        $(this).append('<img class="img-inst" src="./media/numbered/' + index + '.jpg"/>');
     });
 
     $(".img-inst").on("load", function () {
