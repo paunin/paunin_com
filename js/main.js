@@ -26,7 +26,7 @@ $(document).ready(function () {
     resize();
 
     $('.img-bgr').each(function (index) {
-        $(this).append('<img class="img-inst" src="./media/numbered/' + index + '.jpg"/>');
+        $(this).append('<img class="img-inst" src="./media/numbered/' + index + '.jpg?cache='+ new Date().toISOString().slice(0, 10) +'"/>');
     });
 
     $(".img-inst").on("load", function () {
