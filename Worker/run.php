@@ -10,3 +10,5 @@ $worker = new \Paunin\Worker\Instagramm(
 );
 $worker->extract()
        ->numberise();
+
+file_put_contents(__DIR__ . '/../js/cache/imagesCacheVersion.js', 'var IMAGES_CACHE_VERSION=' . time() . ';');
