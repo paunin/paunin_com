@@ -1,0 +1,8 @@
+version: '3'
+services:
+    uiapp:
+        build:
+            context: .
+            dockerfile: WebserverUiApplication.Dockerfile
+        ports:
+            - "8080:80"

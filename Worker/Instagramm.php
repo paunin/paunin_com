@@ -1,4 +1,5 @@
 <?php
+
 namespace Paunin\Worker;
 
 /**
@@ -35,7 +36,7 @@ class Instagramm
      *
      * @param string $userId
      * @param string $accessToken
-     * @param int $numOfPictures
+     * @param int    $numOfPictures
      * @param string $saveDir
      * @param string $displayDir
      */
@@ -59,7 +60,6 @@ class Instagramm
         if (file_exists($dest)) {
             unlink($dest);
         }
-
         symlink($this->saveDir . "/" . $fileName, $this->displayDir . "/" . $count . ".jpg");
     }
 
@@ -75,11 +75,19 @@ class Instagramm
      */
     public function extract()
     {
+
+        $arrContextOptions = [
+            "ssl" => [
+                "verify_peer"      => false,
+                "verify_peer_name" => false,
+            ],
+        ];
+
         $this->log('Start extracting');
         $url = $this->userUrl;
 
         $this->log("Trying to get $url");
-        $result = @file_get_contents($url);
+        $result = file_get_contents($url, false, stream_context_create($arrContextOptions));
 //        $this->log($result);
 
         if (!$result) {
@@ -88,7 +96,11 @@ class Instagramm
             $result = json_decode($result, true);
 
             foreach ($result['data'] as $pic) {
-                $content = @file_get_contents($pic['images']['low_resolution']['url']);
+                $content = file_get_contents(
+                    $pic['images']['low_resolution']['url'],
+                    false,
+                    stream_context_create($arrContextOptions)
+                );
                 $picId   = $pic['id'];
                 if (!$content) {
                     continue;
