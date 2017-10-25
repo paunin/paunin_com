@@ -4,13 +4,10 @@ metadata:
   name: paunin-com
   namespace: paunin-com
   annotations:
-    service.beta.kubernetes.io/aws-load-balancer-internal: 0.0.0.0/0
+    service.beta.kubernetes.io/external-traffic: Global
 spec:
   selector:
     app: paunin-com
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
-      nodePort: 30061
+    - port: 80
   type: LoadBalancer
