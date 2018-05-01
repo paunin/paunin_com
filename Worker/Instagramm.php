@@ -56,11 +56,11 @@ class Instagramm
     protected function linkFile($count, $fileName)
     {
         $dest = $this->displayDir . "/" . $count . ".jpg";
-
+        $source = $this->saveDir . "/" . $fileName;
         if (file_exists($dest)) {
             unlink($dest);
         }
-        symlink($this->saveDir . "/" . $fileName, $this->displayDir . "/" . $count . ".jpg");
+        symlink($source, $dest);
     }
 
     protected function log($text)
