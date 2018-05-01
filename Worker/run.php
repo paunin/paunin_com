@@ -3,7 +3,7 @@ require_once __DIR__ . '/Instagramm.php';
 
 $worker = new \Paunin\Worker\Instagramm(
     '370236096',
-    '370236096.96711f8.595aee91a6bf48989f0066ba19d646f6',
+    '370236096.96711f8.9bd54f06b2934e3d9ba2c1a38161f7ef',
     500,
     '/var/www/application/media/originals',
     '/var/www/application/media/numbered'
