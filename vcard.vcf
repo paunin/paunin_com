@@ -1,0 +1,19 @@
+BEGIN:VCARD
+VERSION:3.0
+FN;CHARSET=UTF-8:Dmitry Paunin
+N;CHARSET=UTF-8:Paunin;Dmitry;;;
+GENDER:M
+EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:d.m.paunin@gmail.com
+EMAIL;CHARSET=UTF-8;type=WORK,INTERNET:dmitriy@finbloxapp.com
+TEL;TYPE=CELL:+6591718707
+TITLE;CHARSET=UTF-8:CTO
+ORG;CHARSET=UTF-8:finbloxapp
+URL;CHARSET=UTF-8:https://paunin.com
+URL;type=WORK;CHARSET=UTF-8:https://www.finbloxapp.com
+X-SOCIALPROFILE;TYPE=facebook:https://www.facebook.com/paunin
+X-SOCIALPROFILE;TYPE=linkedin:http://linkedin.com/in/paunin
+X-SOCIALPROFILE;TYPE=instagram:https://instagram.com/dmpaunin
+X-SOCIALPROFILE;TYPE=Github:https://github.com/paunin
+
+REV:2021-07-04T05:08:47.647Z
+END:VCARD
