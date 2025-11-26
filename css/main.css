@@ -176,8 +176,12 @@ a:hover {
 
 /* Mobile Responsive Styles */
 @media screen and (max-width: 965px) {
-    body {
+    html, body {
         min-width: 0;
+        overflow: hidden;
+        height: 100vh;
+        position: fixed;
+        width: 100%;
     }
     
     #background_wrapper {
@@ -189,15 +193,15 @@ a:hover {
     }
     
     #content_wrapper {
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
+        overflow: hidden;
+        height: 100vh;
     }
     
     #content {
         width: 100%;
         max-width: 100%;
         box-shadow: none;
-        transform: translateY(0);
+        transform: translateY(-100px);
         padding: 20px;
         box-sizing: border-box;
     }
@@ -212,7 +216,7 @@ a:hover {
         width: auto;
         max-width: 90%;
         font-size: min(3.5vw, 15px);
-        margin: 0 auto 12px;
+        margin: 0 auto 30px;
         white-space: nowrap;
     }
     
@@ -271,17 +275,19 @@ a:hover {
 }
 
 @media screen and (max-width: 480px) {
+    #content {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
     img#logo {
         width: 90%;
-        max-width: 280px;
-        margin: 30px auto 15px;
+        margin: 30px auto 10px;
     }
     
     #subtitle {
         width: auto;
-        max-width: 95%;
         font-size: min(3vw, 14px);
-        margin: 0 auto 10px;
+        margin: 0 auto 20px;
         white-space: nowrap;
     }
     
