@@ -77,8 +77,20 @@ body {
 }
 img#logo {
     width: 450px;
-    margin: 75px auto 20px;
+    margin: 75px auto 15px;
 }
+
+#subtitle {
+    width: 450px;
+    margin: 0 auto 40px;
+    font-size: 19px;
+    color: #676565;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-family: arial, serif;
+    white-space: nowrap;
+}
+
 #video {
     height: 507px;
     margin-bottom: 50px;   
@@ -158,4 +170,130 @@ a:hover {
     text-decoration: underline;
 }
 
+#labels-mobile {
+    display: none;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 965px) {
+    body {
+        min-width: 0;
+    }
+    
+    #background_wrapper {
+        display: none;
+    }
+    
+    .more-photos {
+        display: none !important;
+    }
+    
+    #content_wrapper {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    #content {
+        width: 100%;
+        max-width: 100%;
+        box-shadow: none;
+        transform: translateY(0);
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    img#logo {
+        width: 80%;
+        max-width: 350px;
+        margin: 40px auto 10px;
+    }
+    
+    #subtitle {
+        width: auto;
+        max-width: 90%;
+        font-size: min(3.5vw, 15px);
+        margin: 0 auto 12px;
+        white-space: nowrap;
+    }
+    
+    #links {
+        margin-bottom: 50px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 8px;
+    }
+    
+    #links a {
+        flex-shrink: 1;
+        display: inline-block;
+    }
+    
+    #links img {
+        width: 45px;
+        max-width: 12vw;
+        margin: 0;
+    }
+    
+    #labels {
+        display: none !important;
+    }
+    
+    #labels-mobile {
+        display: block;
+        position: fixed;
+        right: 14px;
+        bottom: 25vh;
+        width: 0;
+        height: 0;
+        z-index: 1000;
+    }
+    
+    #labels-content-mobile {
+        transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+    }
+    
+    #labels-mobile a {
+        border-bottom: 1px solid white;
+        color: white;   
+        padding: 7px;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        opacity: 0.9;
+        width: 90px;
+        background: black;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    img#logo {
+        width: 90%;
+        max-width: 280px;
+        margin: 30px auto 15px;
+    }
+    
+    #subtitle {
+        width: auto;
+        max-width: 95%;
+        font-size: min(3vw, 14px);
+        margin: 0 auto 10px;
+        white-space: nowrap;
+    }
+    
+    #links {
+        margin-bottom: 40px;
+        margin-top: 15px;
+        gap: 6px;
+    }
+    
+    #links img {
+        width: 40px;
+        max-width: 11vw;
+    }
+}
 
