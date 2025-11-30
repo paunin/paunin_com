@@ -66,11 +66,12 @@ article code {
 }
 
 article a {
-    color: #882f00;
+    color: #282625;
+    text-decoration: none;
 }
 article a:hover {
-    text-decoration: none;
-    color: #ff5700;
+    text-decoration: underline;
+    color: #030303;
 }
 
 article a.comments{
@@ -119,4 +120,78 @@ article ul li{
 .content {
     margin-top: 30px;
     padding-top: 30px;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 965px) {
+    #logo {
+        width: 80%;
+        max-width: 350px;
+        padding-top: 30px;
+        padding-bottom: 25px;
+    }
+    
+    article {
+        width: 90%;
+        max-width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+    
+    article img {
+        max-width: 100%;
+    }
+    
+    article h1 {
+        font-size: 22px;
+    }
+    
+    article h2 {
+        font-size: 22px;
+    }
+    
+    article h3 {
+        font-size: 20px;
+    }
+    
+    article ul {
+        padding-left: 25px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #logo {
+        width: 90%;
+        max-width: 280px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    article {
+        width: 100%;
+        padding: 0 15px;
+        font-size: 15px;
+    }
+    
+    article h1 {
+        font-size: 20px;
+    }
+    
+    article h2 {
+        font-size: 20px;
+    }
+    
+    article h3 {
+        font-size: 18px;
+    }
+    
+    article a.comments {
+        font-size: 20px;
+        padding: 15px;
+    }
+    
+    article ul {
+        padding-left: 20px;
+    }
 }
