@@ -17,6 +17,8 @@
     let connections = [];
     let width = window.innerWidth;
     let height = window.innerHeight;
+    let glitchOpacity = 1;
+    let isGlitching = false;
     
     canvas.width = width;
     canvas.height = height;
@@ -43,7 +45,7 @@
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(100, 100, 100, ${this.opacity})`;
+            ctx.fillStyle = `rgba(100, 100, 100, ${this.opacity * glitchOpacity})`;
             ctx.fill();
         }
     }
@@ -69,7 +71,7 @@
                 if (distance < maxDistance) {
                     const opacity = (1 - distance / maxDistance) * 0.2;
                     ctx.beginPath();
-                    ctx.strokeStyle = `rgba(100, 100, 100, ${opacity})`;
+                    ctx.strokeStyle = `rgba(100, 100, 100, ${opacity * glitchOpacity})`;
                     ctx.lineWidth = 0.5;
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(particles[j].x, particles[j].y);
@@ -77,6 +79,54 @@
                 }
             }
         }
+    }
+    
+    function triggerGlitch() {
+        if (isGlitching) return;
+        
+        isGlitching = true;
+        
+        // Generate random number of blink pairs (3-6 pairs = 6-12 total blinks)
+        const blinkPairs = Math.floor(Math.random() * 4) + 3;
+        const blinkSequence = [];
+        
+        for (let i = 0; i < blinkPairs; i++) {
+            // Each pair: off then on
+            const offDuration = Math.floor(Math.random() * 80) + 30;  // 30-110ms off
+            const onDuration = Math.floor(Math.random() * 100) + 40;  // 40-140ms on
+            
+            blinkSequence.push({ duration: offDuration, opacity: 0 });
+            blinkSequence.push({ duration: onDuration, opacity: 1 });
+        }
+        
+        // Always end with full opacity for smooth return
+        blinkSequence.push({ duration: 100, opacity: 1 });
+        
+        let currentStep = 0;
+        
+        function executeBlink() {
+            if (currentStep >= blinkSequence.length) {
+                glitchOpacity = 1;
+                isGlitching = false;
+                scheduleNextGlitch();
+                return;
+            }
+            
+            const step = blinkSequence[currentStep];
+            glitchOpacity = step.opacity;
+            
+            setTimeout(() => {
+                currentStep++;
+                executeBlink();
+            }, step.duration);
+        }
+        
+        executeBlink();
+    }
+    
+    function scheduleNextGlitch() {
+        const delay = (Math.random() * 3000 + 7000); // 7-10 seconds
+        setTimeout(triggerGlitch, delay);
     }
     
     function animate() {
@@ -102,5 +152,6 @@
     
     init();
     animate();
+    scheduleNextGlitch();
 })();
 
