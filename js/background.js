@@ -63,6 +63,7 @@
     
     function drawConnections() {
         const maxDistance = 150;
+        const maxRadius = 3.5; // Maximum possible particle radius
         
         for (let i = 0; i < particles.length; i++) {
             for (let j = i + 1; j < particles.length; j++) {
@@ -71,10 +72,19 @@
                 const distance = Math.sqrt(dx * dx + dy * dy);
                 
                 if (distance < maxDistance) {
-                    const opacity = (1 - distance / maxDistance) * 0.2;
+                    // Distance-based opacity
+                    const distanceOpacity = (1 - distance / maxDistance) * 0.25;
+                    
+                    // Size-based opacity (average of both particles' sizes)
+                    const avgSize = (particles[i].radius + particles[j].radius) / 2;
+                    const sizeOpacity = avgSize / maxRadius;
+                    
+                    // Combine both factors
+                    const opacity = distanceOpacity * sizeOpacity;
+                    
                     ctx.beginPath();
                     ctx.strokeStyle = `rgba(100, 100, 100, ${opacity * glitchOpacity})`;
-                    ctx.lineWidth = 0.5;
+                    ctx.lineWidth = 0.7;
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(particles[j].x, particles[j].y);
                     ctx.stroke();
