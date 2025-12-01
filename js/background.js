@@ -19,6 +19,7 @@
     let height = window.innerHeight;
     let glitchOpacity = 1;
     let isGlitching = false;
+    let teleportedParticles = new Map(); // Map particle to fade progress
     
     canvas.width = width;
     canvas.height = height;
@@ -45,10 +46,26 @@
         }
         
         draw() {
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(100, 100, 100, ${this.opacity * glitchOpacity})`;
-            ctx.fill();
+            if (teleportedParticles.has(this)) {
+                const fadeProgress = teleportedParticles.get(this);
+                // Make teleported particles larger and more visible
+                const expandedRadius = this.radius * (1.5 - 0.5 * fadeProgress); // Start 1.5x larger, shrink to normal
+                
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, expandedRadius, 0, Math.PI * 2);
+                
+                // Transition from black (0,0,0) to gray (100,100,100)
+                const r = Math.floor(100 * fadeProgress);
+                const g = Math.floor(100 * fadeProgress);
+                const b = Math.floor(100 * fadeProgress);
+                ctx.fillStyle = `rgba(${r}, ${g}, ${b}, 1)`;
+                ctx.fill();
+            } else {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(100, 100, 100, ${this.opacity * glitchOpacity})`;
+                ctx.fill();
+            }
         }
     }
     
@@ -118,9 +135,43 @@
         
         function executeBlink() {
             if (currentStep >= blinkSequence.length) {
+                // Teleport 15-30% of particles
+                const teleportPercentage = Math.random() * 0.15 + 0.15; // 15-30%
+                const particlesToTeleport = Math.floor(particles.length * teleportPercentage);
+                
+                // Randomly select particles to teleport
+                const shuffled = [...particles].sort(() => Math.random() - 0.5);
+                
+                for (let i = 0; i < particlesToTeleport; i++) {
+                    shuffled[i].x = Math.random() * width;
+                    shuffled[i].y = Math.random() * height;
+                    teleportedParticles.set(shuffled[i], 0); // Start fade at 0
+                }
+                
+                // Start fade transition
+                const fadeStartTime = Date.now();
+                const fadeDuration = 500; // 0.5 seconds
+                
+                function updateFade() {
+                    const elapsed = Date.now() - fadeStartTime;
+                    const progress = Math.min(elapsed / fadeDuration, 1);
+                    
+                    teleportedParticles.forEach((_, particle) => {
+                        teleportedParticles.set(particle, progress);
+                    });
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(updateFade);
+                    } else {
+                        teleportedParticles.clear();
+                    }
+                }
+                
+                updateFade();
                 glitchOpacity = 1;
                 isGlitching = false;
                 scheduleNextGlitch();
+                
                 return;
             }
             
