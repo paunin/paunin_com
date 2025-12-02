@@ -71,11 +71,13 @@
     
     function init() {
         particles = [];
-        const particleCount = Math.min(Math.floor((width * height) / 10000), 100);
+        const particlesPerSquarePixel = 1 / 5000;
+        const particleCount = Math.floor(width * height * particlesPerSquarePixel);
         
         for (let i = 0; i < particleCount; i++) {
             particles.push(new Particle());
         }
+        console.log(particles.length);
     }
     
     function drawConnections() {
