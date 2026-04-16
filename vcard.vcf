@@ -2,16 +2,16 @@ BEGIN:VCARD
 VERSION:3.0
 FN;CHARSET=UTF-8:Dmitry Paunin
 N;CHARSET=UTF-8:Paunin;Dmitry;;;
-ORG:Xprotocol;
+ORG:FORGESOFT;
 GENDER:M
 
 TITLE;CHARSET=UTF-8:Chief Technology Officer
-ORG;CHARSET=UTF-8:xprotocol.org
+ORG;CHARSET=UTF-8:FORGESOFT
 EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:d.m.paunin@gmail.com
-EMAIL;CHARSET=UTF-8;type=WORK,INTERNET:dmitriy@xprotocol.org
+EMAIL;CHARSET=UTF-8;type=WORK,INTERNET:dmitriy@forgesoft.ai
 TEL;TYPE=CELL:+6591718707
 
-URL;type=WORK;CHARSET=UTF-8:https://xprotocol.org
+URL;type=WORK;CHARSET=UTF-8:https://forgesoft.ai
 
 X-SOCIALPROFILE;TYPE=Telegram:https://t.me/paunin
 X-SOCIALPROFILE;TYPE=Whatsapp:https://wa.me/qr/QCY3VGP52HA2M1
